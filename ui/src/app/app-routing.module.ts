@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LicenseComponent } from './modules/views/license/license.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: 'license', component: LicenseComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

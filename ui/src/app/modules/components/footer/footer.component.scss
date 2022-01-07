@@ -1,0 +1,108 @@
+@import '../../../../styles/colors.scss';
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3em;
+  text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+  border-radius: .5em .5em 0 0;
+
+  &.teal{
+    background-color: $coldsteel;
+    border-top: solid $cadetblue .2em;
+    outline: solid $sulu .1em;
+    color: $lite-gray;
+
+    i{
+      color: $sulu;
+    }
+
+    i:hover, a:hover{
+      color: $prismarine;
+    }
+
+    a{
+      color: $lite-gray;
+    }
+  }
+
+  &.magenta{
+    background-color: $richlilac;
+    border-top: solid $magenta .2em;
+    outline: solid $poutpink .1em;
+    color: $gray;
+
+    i{
+      color: $poutpink;
+    }
+
+    a{
+      color: $gray;
+    }
+
+    i:hover, a:hover{
+      color: $carolinablue;
+    }
+
+  }
+
+  &.sunset{
+    background-color: $hyssop;
+    border-top: solid $tomato .2em;
+    outline: solid $salmon .1em;
+    color: $rose;
+
+    i, a{
+      color: $rose;
+    }
+
+    i:hover, a:hover{
+      color: tomato;
+    }
+  }
+
+  &.coffee{
+    background-color: $carafe;
+    border-top: solid $tilledearth .2em;
+    outline: solid $burlywood .1em;
+    color: $amphora;
+
+    i, a{
+      color: $amphora;
+    }
+
+    i:hover, a:hover{
+      color: $burlywood;
+    }
+  }
+
+  &.brick{
+    background-color: $persianplum;
+    border-top: solid $rosybrown .2em;
+    outline: solid $litekhaki .1em;
+    color: $ricochet;
+
+    i, a{
+      color: $ricochet;
+    }
+
+    i:hover, a:hover{
+      color: $firebrick;
+    }
+  }
+
+  a:link{
+    text-decoration: none;
+  }
+
+  a:visited{
+    text-decoration: none;
+  }
+
+  .container-fluid{
+    margin-top: .7em;
+  }
+}
