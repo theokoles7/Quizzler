@@ -1,11 +1,3 @@
-@import 'bootstrap/scss/bootstrap.scss';
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
-
-html, body{
-  background-color: #333;
-}
-
-
 // Palettes:
 //  Teal:     https://hexcolorpedia.com/262136_243f63_107571_4ea07b_c3ea87/
 //  Magenta:  https://hexcolorpedia.com/ff82ca_ff26f6_f019d7_b268d0_85b7fd/
@@ -34,7 +26,7 @@ $pinkpride: #f019d7;
 $richlilac: #b268d0;
 $carolinablue: #85b7fd;
 
-// TOMATO
+// SUNSET
 $salmon: #ff7b70;
 $tomato: #fe4f60;
 $rose: #ce678c;
@@ -54,3 +46,10 @@ $ricochet: #827d75;
 $litekhaki: #988b7b;
 $firebrick: #d83535;
 $rosybrown: #a6816b;
+
+// NONE
+$duskblue: #7ea1bf;
+$puertorico: #56b79d;
+$chamomile: #e6cba3;
+$mauve: #bd778d;
+$aquamarine: #76c6be;
