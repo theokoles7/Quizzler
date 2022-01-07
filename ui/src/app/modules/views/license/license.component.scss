@@ -1,0 +1,12 @@
+@import '../../../../styles/colors.scss';
+
+div{
+  color: $white;
+  font-family: monospace;
+  border: solid $white 1px;
+  padding: 2em;
+
+  h1{
+    border-bottom: solid $white 1px;
+  }
+}
