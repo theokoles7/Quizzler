@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Themes, themeToString } from '../../domain/Theme';
 
 @Component({
   selector: 'q-license',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./license.component.scss']
 })
 export class LicenseComponent implements OnInit {
+  @Input() theme = Themes.Dark;
+
+  getTheme(): String {
+    return themeToString(this.theme);
+  }
 
   constructor() { }
 

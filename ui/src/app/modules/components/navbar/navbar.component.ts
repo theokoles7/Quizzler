@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Themes, themeToString } from '../../domain/Theme';
 
 @Component({
-  selector: 'q-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  selector: 'q-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class NavbarComponent implements OnInit {
   @Input() theme = Themes.Dark;
 
   getTheme(): String {

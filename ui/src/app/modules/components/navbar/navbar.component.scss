@@ -1,0 +1,31 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/styles.scss';
+
+nav{
+  a:link, a:visited{
+    text-decoration: none;
+  }
+  
+  h1{
+    margin-left: 2em;
+    font-family: "Bungee";
+  }
+
+  &.dark{
+    h1{
+      color: $silver;
+    }
+
+    outline: solid $shale .3em;
+    background-color: $bluesmoke;
+  }
+
+  &.light, &.none{
+    h1{
+      color: $black;
+    }
+
+    outline: solid $black .4em;
+    background-color: $blue;
+  }
+}
