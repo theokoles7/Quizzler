@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SettingsDialogComponent } from './settings-dialog/settings-dialog.component';
+import { ButtonComponent } from './button/button.component';
 
 
 
 @NgModule({
   declarations: [
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    SettingsDialogComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +21,9 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   exports: [
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    ButtonComponent,
+    SettingsDialogComponent
   ]
 })
 export class ComponentsModule { }

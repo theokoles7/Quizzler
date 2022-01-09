@@ -7,7 +7,7 @@ import { Themes } from './modules/domain/Theme';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  @Input() theme = Themes.Dark;
+  @Input() theme = Themes.Light;
   title = 'Quizzler';
 
   constructor(private elementRef: ElementRef){}
