@@ -14,6 +14,9 @@ import { LicenseComponent } from './license/license.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    MenuComponent
   ]
 })
 export class ViewsModule { }

@@ -1,0 +1,80 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/styles.scss';
+
+nav{
+  a:link, a:visited{
+    text-decoration: none;
+  }
+  
+  h1{
+    margin-left: 2em;
+    margin-top: .15em;
+    font-family: "Bungee";
+    font-size: 3.5em;
+    -webkit-text-stroke: 3px $black;
+  }
+
+  &.dark{
+    h1, i{
+      color: $silver;
+    }
+
+    outline: solid $shale .3em;
+    background-color: $bluesmoke;
+  }
+
+  &.light, &.none{
+    h1{
+      color: $yellow;
+    }
+
+    h1:hover{
+      color: $green;
+    }
+
+    i{
+      color: $orange;
+    }
+
+    i:hover{
+      color: $pink;
+    }
+
+    outline: solid $black .4em;
+    background-color: $blue;
+    height: 7em;
+  }
+
+  div.row{
+    width: 100%;
+    height: auto;
+
+    div.col{
+      height: auto;
+      width: 100%;
+
+      #left{
+        display: inline-flex;
+        justify-content: flex-start;
+        flex-direction: row;
+      }
+
+      #right{
+        display: inline-flex;
+        justify-content: flex-end;
+        flex-direction: row;
+      }
+    }
+  }
+
+  button{
+    background-color: transparent;
+    border: none;
+
+    i{
+      font-size: 3em;
+      margin-right: 2em;
+      -webkit-text-stroke: 3px $black;
+    }
+  }
+}

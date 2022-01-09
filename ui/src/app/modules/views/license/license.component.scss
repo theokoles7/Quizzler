@@ -1,12 +1,37 @@
 @import '../../../../styles/colors.scss';
 
-div{
+div.container{
+  margin-top: 13em;
   color: $white;
-  font-family: monospace;
-  border: solid $white 1px;
+  font-family: "BungeeHairline";
   padding: 2em;
 
-  h1{
-    border-bottom: solid $white 1px;
+  &.light{
+    border: solid $black 2px;
+    h1{
+      color: $black;
+      border-bottom: solid $black 2px;
+      -webkit-text-stroke: 1px $black;
+    }
+
+    p{
+      color: $black;
+      -webkit-text-stroke: 1px $black;
+    }
+  }
+
+  &.dark{
+    border: solid $silver 2px;
+    
+    h1{
+      color: $silver;
+      border-bottom: solid $silver 2px;
+      -webkit-text-stroke: 1px $silver;
+    }
+
+    p{
+      color: $silver;
+      -webkit-text-stroke: 1px $silver;
+    }
   }
 }

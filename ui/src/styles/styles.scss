@@ -1,6 +1,33 @@
 @import 'bootstrap/scss/bootstrap.scss';
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display-swap');
 
-html, body{
-  background-color: #333;
+@font-face{
+  font-family: "Bungee";
+  src: url("../assets/fonts/Bungee/Bungee-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "BungeeHairline";
+  src: url("../assets/fonts/Bungee_Hairline/BungeeHairline-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "BungeeInline";
+  src: url("../assets/fonts/Bungee_Inline/BungeeInline-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BungeeOutline";
+  src: url("../assets/fonts/Bungee_Outline/BungeeOutline-Regular.ttf") format('truetype');
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "BungeeShade";
+  src: url("../assets/fonts/Bungee_Shade/BungeeShade-Regular.ttf") format('truetype');
+  font-style: normal;
 }
