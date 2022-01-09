@@ -3,7 +3,7 @@
 div.container{
   margin-top: 13em;
   color: $white;
-  font-family: monospace;
+  font-family: "BungeeHairline";
   padding: 2em;
 
   &.light{
@@ -11,10 +11,12 @@ div.container{
     h1{
       color: $black;
       border-bottom: solid $black 2px;
+      -webkit-text-stroke: 1px $black;
     }
 
     p{
       color: $black;
+      -webkit-text-stroke: 1px $black;
     }
   }
 
@@ -24,10 +26,12 @@ div.container{
     h1{
       color: $silver;
       border-bottom: solid $silver 2px;
+      -webkit-text-stroke: 1px $silver;
     }
 
     p{
       color: $silver;
+      -webkit-text-stroke: 1px $silver;
     }
   }
 }

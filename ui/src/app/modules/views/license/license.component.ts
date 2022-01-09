@@ -7,7 +7,7 @@ import { Themes, themeToString } from '../../domain/Theme';
   styleUrls: ['./license.component.scss']
 })
 export class LicenseComponent implements OnInit {
-  @Input() theme = Themes.Dark;
+  @Input() theme = Themes.Light;
 
   getTheme(): String {
     return themeToString(this.theme);
