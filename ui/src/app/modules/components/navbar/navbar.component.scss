@@ -21,6 +21,10 @@ nav{
 
     outline: solid $shale .3em;
     background-color: $bluesmoke;
+
+    h1:hover, i:hover{
+      color: $periwinkle;
+    }
   }
 
   &.light, &.none{

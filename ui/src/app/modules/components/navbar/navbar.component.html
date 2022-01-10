@@ -10,10 +10,12 @@
 
       <div class="col">
         <div class="container-fluid" id="right">
-          <button type="button"><i class="bi bi-gear-fill"></i></button>
+          <button (click)="onSettingsClick()" type="button"><i class="bi bi-gear-fill"></i></button>
         </div>
       </div>
 
     </div>
   </div>
 </nav>
+
+<q-settings-dialog [theme]="theme" (themeChanged)="themeChanged.emit($event)"></q-settings-dialog>

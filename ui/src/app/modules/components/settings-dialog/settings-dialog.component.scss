@@ -1,0 +1,141 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/styles.scss';
+
+div.modal-backdrop{
+  background-color: rgba($black, 0.6);
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div.dialog{
+    padding: none;
+    position: fixed;
+    height: 20em;
+    width: 25em;
+    border-radius: .5em;
+    top: 20em;
+  
+    &.light, &.none{
+      background-color: $white;
+      outline: solid .5em $black;
+
+      div.upper{
+        background-color: $green;
+        color: $purple;
+        border-bottom: solid $black .5em;
+      }
+
+      div.lower{
+        .setting{
+          color: $black;
+          -webkit-text-stroke: $black 2px;
+        }
+      }
+
+      #light{
+        outline: solid $black .3em;
+      }
+
+      #dark{
+        outline: solid $black .3em;
+      }
+
+      #light.active, #dark.active{
+        outline: solid $green .3em;
+      }
+    }
+
+    &.dark{
+      outline: solid $shale .3em;
+      background-color: $midnite;
+
+      div.upper{
+        background-color: $bluesmoke;
+        color: $silver;
+        border-bottom: solid $shale .4em;
+      }
+
+      div.lower{
+        .setting{
+          color: $silver;
+          -webkit-text-stroke: $silver 2px;
+        }
+      }
+
+      #light{
+        outline: solid $shale .3em;
+      }
+
+      #dark{
+        outline: solid $shale .3em;
+      }
+
+      #light.active, #dark.active{
+        outline: solid $periwinkle .3em;
+      }
+    }
+
+    div.upper{
+      h2{
+        text-align: center;
+        font-size: 3em;
+        -webkit-text-stroke: $black 3px;
+      }
+      font-family: "Bungee";
+      width: 100%;
+      height: 20%;
+    }
+
+    div.lower{
+
+      div.setting{
+        display: inline-flex;
+        flex-direction: row;
+        padding: 1em;
+
+        h3{
+          padding-left: .5em;
+          padding-top: .25em;
+          font-family: "BungeeHairline";
+          vertical-align: middle;
+          text-align: center;
+        }
+
+        .button-group{
+          margin-left: 4em;
+
+          button{
+            width: 5em;
+            height: 3em;
+            text-align: center;
+            font-family: "BungeeHairline";
+          }
+
+          #light{
+            background-image: linear-gradient(to right, $red, $orange, $yellow, $green, $blue, $purple);
+            color: $black;
+            -webkit-text-stroke: $black 2px;
+            border-radius: 0.5em 0 0 0.5em;
+            border: none;
+          }
+
+          #dark{
+            background-color: $bluesmoke;
+            color: $silver;
+            -webkit-text-stroke: $silver 2px;
+            border-radius: 0 0.5em 0.5em 0;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

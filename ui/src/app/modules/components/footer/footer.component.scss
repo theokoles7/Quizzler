@@ -23,6 +23,7 @@ footer{
 
     i:hover, a:hover{
       color: $periwinkle;
+      -webkit-text-stroke: 1px $periwinkle;
     }
   }
 
@@ -38,6 +39,7 @@ footer{
 
     i:hover, a:hover{
       color: $gray;
+      -webkit-text-stroke: 1px $gray;
     }
   }
 
