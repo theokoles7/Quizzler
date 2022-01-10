@@ -1,5 +1,5 @@
-<q-navbar></q-navbar>
+<q-navbar [theme]="theme" (themeChanged)="emitThemeChanged($event)"></q-navbar>
 
 <router-outlet></router-outlet>
 
-<q-footer></q-footer>
+<q-footer [theme]="theme"></q-footer>

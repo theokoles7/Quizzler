@@ -7,7 +7,7 @@ import { Themes, themeToString } from '../../domain/Theme';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  @Input() theme = Themes.Light;
+  @Input() theme = Themes.None;
 
   getTheme(): String {
     return themeToString(this.theme);

@@ -4,7 +4,6 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SettingsDialogComponent } from './settings-dialog/settings-dialog.component';
-import { ButtonComponent } from './button/button.component';
 
 
 
@@ -13,7 +12,6 @@ import { ButtonComponent } from './button/button.component';
     FooterComponent,
     NavbarComponent,
     SettingsDialogComponent,
-    ButtonComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +20,6 @@ import { ButtonComponent } from './button/button.component';
   exports: [
     FooterComponent,
     NavbarComponent,
-    ButtonComponent,
     SettingsDialogComponent
   ]
 })

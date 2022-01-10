@@ -9,7 +9,7 @@ export function parseTheme(themeString: string): Themes{
   }
 }
 
-export function themeToString(theme: Themes): String{
+export function themeToString(theme: Themes): string{
   switch(theme){
     case Themes.Light: return "light";
     case Themes.Dark: return "dark";
