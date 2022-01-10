@@ -33,11 +33,15 @@ div.modal-backdrop{
         border-bottom: solid $black .5em;
       }
 
-      div.lower{
+      div.middle{
         .setting{
           color: $black;
           -webkit-text-stroke: $black 2px;
         }
+      }
+
+      div.lower{
+        border-top: solid $black .5em;
       }
 
       #light{
@@ -60,14 +64,18 @@ div.modal-backdrop{
       div.upper{
         background-color: $bluesmoke;
         color: $silver;
-        border-bottom: solid $shale .4em;
+        border-bottom: solid $shale .3em;
       }
 
-      div.lower{
+      div.middle{
         .setting{
           color: $silver;
           -webkit-text-stroke: $silver 2px;
         }
+      }
+
+      div.lower{
+        border-top: solid $shale .3em;
       }
 
       #light{
@@ -94,7 +102,7 @@ div.modal-backdrop{
       height: 20%;
     }
 
-    div.lower{
+    div.middle{
 
       div.setting{
         display: inline-flex;
@@ -137,5 +145,29 @@ div.modal-backdrop{
         }
       }
     }
+
+    div.lower{
+      margin-top: 8em;
+
+      button{
+        width: 100%;
+        height: 2em;
+        font-size: 1.5em;
+        border: none;
+      
+        &.dark{
+          background-color: $bluesmoke;
+          color: $silver;
+          font-family: "BungeeHairline";
+          -webkit-text-stroke: $silver 2px;
+        }
+      
+        &.light, &.none{
+          background-color: $yellow;
+          color: $black;
+          font-family: "BungeeHairline";
+          -webkit-text-stroke: $black 2px;
+        }
+      }}
   }
 }

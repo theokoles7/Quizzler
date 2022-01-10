@@ -11,9 +11,9 @@ const ESC_KEY = 27;
 export class SettingsDialogComponent implements OnInit {
   @Input() theme = Themes.Light;
   @Output() themeChanged: EventEmitter<Themes> = new EventEmitter;
-  visible: Boolean = false;
+  visible: Boolean = true;
 
-  getTheme(): String {
+  getTheme(): string {
     return themeToString(this.theme);
   }
 
