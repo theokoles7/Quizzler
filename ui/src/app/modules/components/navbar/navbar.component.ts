@@ -8,7 +8,7 @@ import { SettingsDialogComponent } from '../settings-dialog/settings-dialog.comp
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  @Input() theme = Themes.Light;
+  @Input() theme = Themes.None;
 
   @ViewChild(SettingsDialogComponent) settingsDialog!: SettingsDialogComponent;
   @Output() themeChanged: EventEmitter<Themes> = new EventEmitter();

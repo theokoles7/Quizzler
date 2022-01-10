@@ -9,9 +9,9 @@ const ESC_KEY = 27;
   styleUrls: ['./settings-dialog.component.scss'],
 })
 export class SettingsDialogComponent implements OnInit {
-  @Input() theme = Themes.Light;
+  @Input() theme = Themes.None;
   @Output() themeChanged: EventEmitter<Themes> = new EventEmitter;
-  visible: Boolean = true;
+  visible: Boolean = false;
 
   getTheme(): string {
     return themeToString(this.theme);
