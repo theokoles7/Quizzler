@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { parseTheme, Themes } from './modules/domain/Theme';
+import { ThemeService } from './modules/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent {
   @Input() theme = Themes.Light;
   title = 'Quizzler';
 
-  constructor(private elementRef: ElementRef){}
+  constructor(private elementRef: ElementRef, private themeService: ThemeService){}
 
   ngAfterViewInit(){
     window.setTimeout((_: any) => {
@@ -22,6 +23,8 @@ export class AppComponent {
 
   emitThemeChanged(theme: Themes){
     this.theme = theme;
+    this.themeService.theme = theme;
+    this.themeService.themeChanged.emit(theme);
     this.updateHost();
   }
 
