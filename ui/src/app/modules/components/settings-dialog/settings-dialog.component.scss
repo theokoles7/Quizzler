@@ -133,6 +133,9 @@ div.modal-backdrop{
             -webkit-text-stroke: $black 2px;
             border-radius: 0.5em 0 0 0.5em;
             border: none;
+
+            &:hover{
+              -webkit-text-stroke: $black 3px;}
           }
 
           #dark{
@@ -141,6 +144,10 @@ div.modal-backdrop{
             -webkit-text-stroke: $silver 2px;
             border-radius: 0 0.5em 0.5em 0;
             border: none;
+
+            &:hover{
+              -webkit-text-stroke: $silver 3px;
+            }
           }
         }
       }
