@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Themes, themeToString, parseTheme } from '../../domain/Theme';
+import { RequestService } from '../../services/request.service';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
@@ -10,12 +11,17 @@ import { ThemeService } from '../../services/theme.service';
 
 export class GameComponent implements OnInit {
   theme: Themes = Themes.None;
+  url: string = "hello";
 
-  constructor(private themeService: ThemeService) { }
+  constructor(
+    private themeService: ThemeService, 
+    private requestService: RequestService) { }
 
   ngOnInit(): void {
     this.loadTheme();
     this.themeService.themeChanged.subscribe((theme) => {this.theme = theme});
+    this.requestService.urlChanged.subscribe((url) => {this.url = url});
+    this.url = this.requestService.url;
   }
 
   getTheme(): string{
