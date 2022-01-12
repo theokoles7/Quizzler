@@ -5,6 +5,7 @@ import { GameComponent } from './game/game.component';
 import { LicenseComponent } from './license/license.component';
 import { ComponentsModule } from '../components/components.module';
 import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -13,6 +14,7 @@ import { RouterModule } from '@angular/router';
     MenuComponent,
     GameComponent,
     LicenseComponent,
+    NotFoundComponent,
   ],
   imports: [
     CommonModule,

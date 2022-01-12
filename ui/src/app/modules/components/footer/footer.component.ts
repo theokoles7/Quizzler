@@ -9,7 +9,7 @@ import { Themes, themeToString } from '../../domain/Theme';
 export class FooterComponent implements OnInit {
   @Input() theme = Themes.None;
 
-  getTheme(): String {
+  getTheme(): string {
     return themeToString(this.theme);
   }
 

@@ -4,6 +4,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SettingsDialogComponent } from './settings-dialog/settings-dialog.component';
+import { QuestionComponent } from './question/question.component';
 
 
 
@@ -12,6 +13,7 @@ import { SettingsDialogComponent } from './settings-dialog/settings-dialog.compo
     FooterComponent,
     NavbarComponent,
     SettingsDialogComponent,
+    QuestionComponent,
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { SettingsDialogComponent } from './settings-dialog/settings-dialog.compo
   exports: [
     FooterComponent,
     NavbarComponent,
-    SettingsDialogComponent
+    SettingsDialogComponent,
+    QuestionComponent
   ]
 })
 export class ComponentsModule { }

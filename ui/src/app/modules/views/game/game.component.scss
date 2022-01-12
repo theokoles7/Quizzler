@@ -1,0 +1,19 @@
+@import '../../../../styles/colors.scss';
+
+div.questions{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div{
+  text-align: center;
+  justify-content: center;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  border: solid $black 5px;
+}

@@ -1,0 +1,130 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/styles.scss';
+
+div.outer{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10em;
+  width: 40em;
+  height: 30em;
+  border-radius: 0.5em;
+
+  &.light, &.none{
+    outline: solid $black 0.5em;
+  }
+
+  &.dark{
+    outline: solid $shale 0.3em;
+  }
+
+  div.upper{
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    width: 100%;
+
+    div.diff, div.cat{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding-left: 1em;
+      padding-right: 1em;
+      justify-content: space-between;
+
+      h4{
+        font-family: "BungeeHairline";
+        font-size: 1.4em;
+        padding-top: .2em;
+
+        &.light, &.none{
+          color: $black;
+          -webkit-text-stroke: $black 1px;
+        }
+
+        &.dark{
+          color: $silver;
+          -webkit-text-stroke: $silver 1px;
+        }
+      }
+
+      h3{
+        font-family: "BungeeHairline";
+
+        &.light, &.none{
+          color: $black;
+          -webkit-text-stroke: $black 2px;
+        }
+
+        &.dark{
+          color: $silver;
+          -webkit-text-stroke: $silver 2px;
+        }
+      }
+    }
+  }
+
+  div.middle{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    p{
+      text-align: center;
+      font-family: "BungeeHairline";
+      font-size: 1.5em;
+      padding: 1em;
+
+      &.light, &.none{
+        color: $black;
+        -webkit-text-stroke: $black 3px;
+      }
+
+      &.dark{
+        color: $silver;
+        -webkit-text-stroke: $silver 3px;
+      }
+    }
+  }
+
+  div.lower{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    button{
+      border: none;
+      width: 50%;
+      font-family: "BungeeHairline";
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 0.5em;
+
+      &.light, &.none{
+        outline: solid $black 0.2em;
+        background-color: $white;
+        color: $black;
+        -webkit-text-stroke: $black 1px;
+
+        &:hover{
+          -webkit-text-stroke-width: 2px;
+          background-color: $blue;
+        }
+      }
+
+      &.dark{
+        outline: solid $shale 0.2em;
+        color: $silver;
+        background-color: $bluesmoke;
+        -webkit-text-stroke: $silver 1px;
+
+        &:hover{
+          -webkit-text-stroke-width: 2px;
+        }
+      }
+    }
+  }
+}
