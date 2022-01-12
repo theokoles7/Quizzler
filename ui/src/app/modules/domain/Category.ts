@@ -62,3 +62,22 @@ export function numToCat(num: number): Categories {
     default: return Categories.Any;
   }
 }
+
+export function shortCat(cat: string): string{
+  switch(cat){
+    case "Entertainment: Books": return "Books";
+    case "Entertainment: Film": return "Film";
+    case "Entertainment: Music": return "Music";
+    case "Entertainment: Musicals Theater": return "Theater";
+    case "Entertainment: Television": return "Television";
+    case "Entertainment: Video Games": return "Video Games";
+    case "Entertainment: Board Games": return "Board Games";
+    case "Science & Nature": return "Science";
+    case "Science: Computers": return "Computers";
+    case "Science: Mathematics": return "Mathematics";
+    case "Entertainment: Comics": return "Comics";
+    case "Entertainment: Japanese Anime & Manga": return "Anime/Manga";
+    case "Entertainment: Cartoon & Animations": return "Cartoons";
+    default: return cat;
+  }
+}
