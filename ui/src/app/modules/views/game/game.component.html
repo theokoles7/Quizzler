@@ -1,1 +1,15 @@
-<p>game works!</p>
+<div class="questions">
+  <div *ngFor="let q of questions">
+    {{q.category}}
+    <hr>
+    {{q.type}}
+    <hr>
+    {{q.difficulty}}
+    <hr>
+    {{q.question}}
+    <hr>
+    {{q.correct_answer}}
+    <hr>
+    {{q.incorrect_answers}}
+  </div>
+</div>

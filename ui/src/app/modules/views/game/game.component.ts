@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Question } from '../../domain/Question';
 import { Themes, themeToString, parseTheme } from '../../domain/Theme';
 import { RequestService } from '../../services/request.service';
 import { ThemeService } from '../../services/theme.service';
@@ -11,17 +13,17 @@ import { ThemeService } from '../../services/theme.service';
 
 export class GameComponent implements OnInit {
   theme: Themes = Themes.None;
-  url: string = "hello";
+  questions!: Question[];
 
   constructor(
     private themeService: ThemeService, 
-    private requestService: RequestService) { }
+    private requestService: RequestService,
+    private http: HttpClient) { }
 
   ngOnInit(): void {
     this.loadTheme();
     this.themeService.themeChanged.subscribe((theme) => {this.theme = theme});
-    this.requestService.urlChanged.subscribe((url) => {this.url = url});
-    this.url = this.requestService.url;
+    this.requestQuestions(this.requestService.url);
   }
 
   getTheme(): string{
@@ -33,5 +35,11 @@ export class GameComponent implements OnInit {
     if(savedTheme){
       this.theme = parseTheme(savedTheme);
     }
+  }
+
+  private requestQuestions(url: string){
+    this.http.get<any>(url).subscribe((loadedQuestions: { results: any; }) => {
+    this.questions = loadedQuestions.results;
+  })
   }
 }
