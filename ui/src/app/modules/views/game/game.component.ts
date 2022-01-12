@@ -4,6 +4,7 @@ import { Question } from '../../domain/Question';
 import { Themes, themeToString, parseTheme } from '../../domain/Theme';
 import { RequestService } from '../../services/request.service';
 import { ThemeService } from '../../services/theme.service';
+import { QuestionComponent } from '../../components/question/question.component';
 
 @Component({
   selector: 'q-game',
