@@ -23,7 +23,7 @@ import { QuestionComponent } from './question/question.component';
     FooterComponent,
     NavbarComponent,
     SettingsDialogComponent,
-    QuestionComponent
+    QuestionComponent,
   ]
 })
 export class ComponentsModule { }

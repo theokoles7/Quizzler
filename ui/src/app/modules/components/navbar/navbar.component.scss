@@ -2,6 +2,8 @@
 @import '../../../../styles/styles.scss';
 
 nav{
+  height: 100%;
+
   a:link, a:visited{
     text-decoration: none;
   }
@@ -39,8 +41,6 @@ nav{
     outline: solid $black .4em;
     background-color: $blue;
   }
-  
-  height: 7em;
 
   div.row{
     width: 100%;
