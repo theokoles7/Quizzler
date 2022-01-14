@@ -55,6 +55,7 @@ export class QuestionComponent implements OnInit {
     s = s.replace(/&trade;/gi, "");
     s = s.replace(/&gt;/gi, ">");
     s = s.replace(/&lt;/gi, "<");
+    s = s.replace(/&ntilde;/gi, "n");
     return s;
   }
 
