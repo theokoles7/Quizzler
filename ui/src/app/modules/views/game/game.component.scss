@@ -7,7 +7,7 @@ div.questions{
   justify-content: center;
 }
 
-div{
+div.question{
   text-align: center;
   justify-content: center;
   color: $black;
@@ -15,5 +15,6 @@ div{
   flex-direction: column;
   width: auto;
   height: auto;
-  border: solid $black 5px;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }

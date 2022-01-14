@@ -110,18 +110,19 @@ div.outer{
 
         &:hover{
           -webkit-text-stroke-width: 2px;
-          background-color: $blue;
+          background-color: $yellow;
         }
       }
 
       &.dark{
         outline: solid $shale 0.2em;
         color: $silver;
-        background-color: $bluesmoke;
+        background-color: $midnite;
         -webkit-text-stroke: $silver 1px;
 
         &:hover{
           -webkit-text-stroke-width: 2px;
+          background-color: $bluesmoke;
         }
       }
     }
