@@ -20,11 +20,6 @@ footer{
     i, a{
       color: $silver;
     }
-
-    i:hover, a:hover{
-      color: $periwinkle;
-      -webkit-text-stroke: 1px $periwinkle;
-    }
   }
 
   &.light, &.none{
@@ -36,11 +31,10 @@ footer{
     i, a{
       color: $black;
     }
+  }
 
-    i:hover, a:hover{
-      color: $gray;
-      -webkit-text-stroke: 1px $gray;
-    }
+  i:hover, a:hover{
+    -webkit-text-stroke-width: 2px;
   }
 
   a:link, a:visited{
