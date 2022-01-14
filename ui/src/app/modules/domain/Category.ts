@@ -34,6 +34,35 @@ export function catToNum(cat: Categories): number {
   }
 }
 
+export function numToString(num: number): string{
+  switch (Number(num)) {
+    case 9: return "General Knowledge";
+    case 10: return "Books";
+    case 11: return "Film";
+    case 12: return "Music";
+    case 13: return "Theater";
+    case 14: return "Television";
+    case 15: return "Video Games";
+    case 16: return "Board Games";
+    case 17: return "Science";
+    case 18: return "Computers";
+    case 19: return "Mathematics";
+    case 20: return "Mythology";
+    case 21: return "Sports";
+    case 22: return "Geography";
+    case 23: return "History";
+    case 24: return "Politics";
+    case 25: return "Art";
+    case 26: return "Celebrities";
+    case 27: return "Animals";
+    case 28: return "Vehicles";
+    case 29: return "Comics";
+    case 31: return "Anime/Manga";
+    case 32: return "Cartoons";
+    default: return "Any";
+  }
+}
+
 export function numToCat(num: number): Categories {
   switch (num) {
     case 9: return Categories["General Knowledge"];

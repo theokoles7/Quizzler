@@ -41,6 +41,7 @@ export class GameComponent implements OnInit {
   private requestQuestions(url: string){
     this.http.get<any>(url).subscribe((loadedQuestions: { results: any; }) => {
     this.questions = loadedQuestions.results;
+    console.log(JSON.stringify(this.questions));
   })
   }
 }

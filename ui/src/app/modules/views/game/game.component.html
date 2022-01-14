@@ -1,12 +1,25 @@
-<div class="questions">
-  <div class="question" *ngFor="let q of questions">
-    <q-question [theme]="theme"
-    [category]="q.category"
-    [type]="q.type"
-    [difficulty]="q.difficulty"
-    [question]="q.question"
-    [correct_answer]="q.correct_answer"
-    [incorrect_answers]="q.incorrect_answers"
-    ></q-question>
+<div class="game {{getTheme()}}">
+  
+  <div class="gameboard">
+    <q-gameboard [theme]="theme"></q-gameboard>
   </div>
+
+  <div class="questions">
+    <div class="question" *ngFor="let q of questions">
+      <q-question 
+      [theme]="theme" 
+      [category]="q.category" 
+      [type]="q.type" 
+      [difficulty]="q.difficulty"
+      [question]="q.question" 
+      [correct_answer]="q.correct_answer" 
+      [incorrect_answers]="q.incorrect_answers">
+      </q-question>
+    </div>
+  </div>
+
+  <div class="scoreboard">
+    <q-scoreboard [theme]="theme"></q-scoreboard>
+  </div>
+
 </div>

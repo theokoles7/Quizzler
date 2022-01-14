@@ -1,0 +1,87 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/styles.scss';
+
+div.wrapper{
+  width: 100%;
+  height: 60%;
+  margin-top: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  div.outer{
+    border-radius: 0.5em;
+    width: 70%;
+    height: 100%;
+    margin-left: auto;
+  
+    &.light, &.none{
+      background-color: $white;
+      outline: solid $black 0.3em;
+    }
+  
+    &.dark{
+      background-color: $midnite;
+      outline: solid $shale 0.3em;
+    }
+  
+    div.upper{
+      height: 20%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      &.light, &.none{
+        border-bottom: solid $black 0.3em;
+        background-color: $blue;
+      }
+
+      &.dark{
+        border-bottom: solid $shale 0.3em;
+        background-color: $bluesmoke;
+      }
+
+      h4{
+        font-family: "Bungee";
+        text-align: center;
+        font-size: 2em;
+
+        &.light, &.none{
+          color: $yellow;
+          -webkit-text-stroke: $black 2px;
+        }
+
+        &.dark{
+          color: $silver;
+          -webkit-text-stroke: $black 2px;
+        }
+      }
+    }
+  
+    div.lower{
+      height: 80%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 1em;
+
+      h5{
+        font-family: "BungeeHairline";
+        text-align: center;
+        font-size: 1.75em;
+        
+        &.light, &.none{
+          color: $black;
+          -webkit-text-stroke: $black 1px;
+        }
+
+        &.dark{
+          color: $silver;
+          -webkit-text-stroke: $silver 1px;
+        }
+      }
+    }
+  }
+}
