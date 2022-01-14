@@ -22,6 +22,9 @@ export class QuestionComponent implements OnInit {
     this.answers = this.incorrect_answers;
     this.answers.push(this.correct_answer);
     this.shuffle(this.answers);
+    for(let i = 0; i < this.answers.length; i++){
+      this.answers[i] = this.cleanString(this.answers[i]);
+    }
     return this.answers;
   }
 
@@ -38,14 +41,21 @@ export class QuestionComponent implements OnInit {
     }
   }
 
-  private cleanQ(q: string): string{
-    const a = /&quot;/gi;
-    const b = /&#039;/gi;
-    const c = /&amp;/gi;
-    q = q.replace(a, "\'");
-    q = q.replace(b, "\'");
-    q = q.replace(c, "&");
-    return q;
+  private cleanString(s: string): string{
+    s = s.replace(/&quot;/gi, "\"");
+    s = s.replace(/&#039;/gi, "\'");
+    s = s.replace(/&amp;/gi, "&");
+    s = s.replace(/&euml;/gi, "e");
+    s = s.replace(/&ecirc;/gi, "e");
+    s = s.replace(/&eacute;/gi, "e");
+    s = s.replace(/&uacute;/gi, "u");
+    s = s.replace(/&atilde;/gi, "a");
+    s = s.replace(/&oacute;/gi, "o");
+    s = s.replace(/&reg;/gi, "");
+    s = s.replace(/&trade;/gi, "");
+    s = s.replace(/&gt;/gi, ">");
+    s = s.replace(/&lt;/gi, "<");
+    return s;
   }
 
   constructor() { }
@@ -53,7 +63,7 @@ export class QuestionComponent implements OnInit {
   ngOnInit(): void {
     this.answers = this.combineAnswers();
     this.category = shortCat(this.category);
-    this.question = this.cleanQ(this.question);
+    this.question = this.cleanString(this.question);
   }
 
 }
