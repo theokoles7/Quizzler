@@ -5,6 +5,9 @@ import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SettingsDialogComponent } from './settings-dialog/settings-dialog.component';
 import { QuestionComponent } from './question/question.component';
+import { ScoreboardComponent } from './scoreboard/scoreboard.component';
+import { GameboardComponent } from './gameboard/gameboard.component';
+import { GameOverComponent } from './game-over/game-over.component';
 
 
 
@@ -14,6 +17,9 @@ import { QuestionComponent } from './question/question.component';
     NavbarComponent,
     SettingsDialogComponent,
     QuestionComponent,
+    ScoreboardComponent,
+    GameboardComponent,
+    GameOverComponent,
   ],
   imports: [
     CommonModule,
@@ -23,7 +29,10 @@ import { QuestionComponent } from './question/question.component';
     FooterComponent,
     NavbarComponent,
     SettingsDialogComponent,
-    QuestionComponent
+    QuestionComponent,
+    ScoreboardComponent,
+    GameboardComponent,
+    GameOverComponent
   ]
 })
 export class ComponentsModule { }

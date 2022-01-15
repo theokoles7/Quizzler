@@ -4,7 +4,6 @@
 div.outer{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10em;
   width: 40em;
   height: 30em;
   border-radius: 0.5em;
@@ -111,18 +110,36 @@ div.outer{
 
         &:hover{
           -webkit-text-stroke-width: 2px;
-          background-color: $blue;
+          background-color: $yellow;
         }
       }
 
       &.dark{
         outline: solid $shale 0.2em;
         color: $silver;
-        background-color: $bluesmoke;
+        background-color: $midnite;
         -webkit-text-stroke: $silver 1px;
 
         &:hover{
           -webkit-text-stroke-width: 2px;
+          background-color: $bluesmoke;
+        }
+      }
+
+      &:disabled{
+        color: $black;
+        -webkit-text-stroke: $black 1px;
+
+        &.correct{
+          background-color: $green;
+        }
+
+        &.incorrect{
+          background-color: $red;
+        }
+
+        &:hover{
+          -webkit-text-stroke-width: 1px;
         }
       }
     }

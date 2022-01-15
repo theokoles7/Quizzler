@@ -25,7 +25,7 @@ div.menu{
     margin: none;
 
     &.light, &.none{
-      background-color: $pink;
+      background-color: $blue;
       border-bottom: solid $black 0.5em;
     }
 
@@ -41,7 +41,7 @@ div.menu{
       -webkit-text-stroke: $black 3px;
 
       &.light, &.none{
-        color: $purple;
+        color: $yellow;
       }
 
       &.dark{
@@ -78,7 +78,7 @@ div.menu{
           margin-top: .1em;
   
           &.light, &.none{
-            color: $orange;
+            color: $yellow;
             -webkit-text-stroke: $black 2px;
           }
   

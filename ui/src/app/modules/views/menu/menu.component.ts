@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { parseTheme, Themes, themeToString } from '../../domain/Theme';
 import { ThemeService } from '../../services/theme.service';
-import { Categories, catToNum } from '../../domain/Category';
+import { numToCat, numToString } from '../../domain/Category';
 import { RequestService } from '../../services/request.service';
 import { Router } from '@angular/router';
+import { GameService } from '../../services/game.service';
 
 @Component({
   selector: 'q-menu',
@@ -26,7 +27,8 @@ export class MenuComponent implements OnInit {
   constructor(
     private themeService: ThemeService, 
     private requestService: RequestService,
-    private router: Router) { }
+    private router: Router,
+    private gameService: GameService) { }
 
   ngOnInit(): void {
     this.loadTheme();
@@ -58,13 +60,16 @@ export class MenuComponent implements OnInit {
 
   beginGame(){
     this.url = "https://opentdb.com/api.php?amount=" + this.amount;
+    this.gameService.amount = this.amount;
 
     if(this.category != 0){
       this.url += "&category=" + this.category;
+      this.gameService.category = numToString(this.category);
     }
 
     if(this.difficulty != "any"){
       this.url += "&difficulty=" + this.difficulty;
+      this.gameService.difficulty = this.difficulty;
     }
 
     if(this.type != "any"){

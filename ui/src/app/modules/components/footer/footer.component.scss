@@ -2,30 +2,11 @@
 @import '../../../../styles/styles.scss';
 
 footer{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 3em;
-  text-align: center;
-  font-family: "BungeeHairline";
-  font-size: 20px;
+  height: 100%;
   border-radius: .5em .5em 0 0;
-
-  &.dark{
-    outline: solid $shale .3em;
-    background-color: $bluesmoke;
-    color: $silver;
-    -webkit-text-stroke: 1px $silver;
-
-    i, a{
-      color: $silver;
-    }
-
-    i:hover, a:hover{
-      color: $periwinkle;
-      -webkit-text-stroke: 1px $periwinkle;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 
   &.light, &.none{
     outline: solid $black .3em;
@@ -36,23 +17,50 @@ footer{
     i, a{
       color: $black;
     }
+  }
 
-    i:hover, a:hover{
-      color: $gray;
-      -webkit-text-stroke: 1px $gray;
+  &.dark{
+    outline: solid $shale .3em;
+    background-color: $bluesmoke;
+    color: $silver;
+    -webkit-text-stroke: 1px $silver;
+
+    i, a{
+      color: $silver;
     }
   }
 
-  a:link, a:visited{
-    text-decoration: none;
-  }
+  div.wrapper{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
 
-  .container-fluid{
-    margin-top: .7em;
-  }
+    div.item{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
 
-  i{
-    font-size: 1.1em;
-    vertical-align: middle;
+      font-family: "BungeeHairline";
+      font-size: 20px;
+
+      i:hover, a:hover{
+        -webkit-text-stroke-width: 2px;
+      }
+    
+      a:link, a:visited{
+        text-decoration: none;
+      }
+    
+      i{
+        font-size: 1.1em;
+        vertical-align: middle;
+      }
+
+      a{
+        text-align: center;
+      }
+    }
   }
 }

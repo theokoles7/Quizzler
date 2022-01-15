@@ -2,6 +2,8 @@
 @import '../../../../styles/styles.scss';
 
 nav{
+  height: 100%;
+
   a:link, a:visited{
     text-decoration: none;
   }
@@ -28,27 +30,17 @@ nav{
   }
 
   &.light, &.none{
-    h1{
+    h1, i{
       color: $yellow;
     }
 
-    h1:hover{
-      color: $green;
-    }
-
-    i{
-      color: $orange;
-    }
-
-    i:hover{
-      color: $pink;
+    h1:hover, i:hover{
+      color: $red;
     }
 
     outline: solid $black .4em;
     background-color: $blue;
   }
-  
-  height: 7em;
 
   div.row{
     width: 100%;

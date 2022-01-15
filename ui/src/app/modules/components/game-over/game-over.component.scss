@@ -5,7 +5,7 @@ div.modal-backdrop{
   background-color: rgba($black, 0.6);
   height: 100%;
   width: 100%;
-  z-index: 0;
+  z-index: 2;
   bottom: 0;
   top: 0;
   left: 0;
@@ -22,6 +22,7 @@ div.modal-backdrop{
     width: 25em;
     border-radius: .5em;
     top: 20em;
+    z-index: 3;
   
     &.light, &.none{
       background-color: $white;
@@ -47,7 +48,7 @@ div.modal-backdrop{
       height: 20%;
 
       &.light, &.none{
-        background-color: $yellow;
+        background-color: $blue;
         border-bottom: solid $black .5em;
       }
 
@@ -62,7 +63,7 @@ div.modal-backdrop{
         -webkit-text-stroke: $black 3px;
 
         &.light, &.none{
-          color: $blue;
+          color: $yellow;
         }
 
         &.dark{
@@ -75,7 +76,7 @@ div.modal-backdrop{
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      height: 60%;
+      height: 70%;
 
       &.light, &.none{
         background-color: $white;
@@ -89,6 +90,7 @@ div.modal-backdrop{
         display: inline-flex;
         flex-direction: row;
         padding: 1em;
+        justify-content: space-evenly;
 
         &.light, &.none{
           color: $black;
@@ -107,44 +109,6 @@ div.modal-backdrop{
           vertical-align: middle;
           text-align: center;
         }
-
-        div.button-group{
-          margin-left: 4em;
-
-          button{
-            width: 5em;
-            height: 3em;
-            text-align: center;
-            font-family: "BungeeHairline";
-          }
-
-          #light, #dark{
-            outline: solid $black .3em;
-          }
-
-          #light{
-            background-image: linear-gradient(to right, $red, $orange, $yellow, $green, $blue, $purple);
-            color: $black;
-            -webkit-text-stroke: $black 2px;
-            border-radius: 0.5em 0 0 0.5em;
-            border: none;
-
-            &:hover{
-              -webkit-text-stroke: $black 3px;}
-          }
-
-          #dark{
-            background-color: $bluesmoke;
-            color: $silver;
-            -webkit-text-stroke: $silver 2px;
-            border-radius: 0 0.5em 0.5em 0;
-            border: none;
-
-            &:hover{
-              -webkit-text-stroke: $silver 3px;
-            }
-          }
-        }
       }
     }
 
@@ -160,16 +124,23 @@ div.modal-backdrop{
       }
 
       button{
-        width: 100%;
+        width: 50%;
         height: 100%;
         font-size: 1.5em;
         border: none;
       
         &.light, &.none{
-          background-color: $green;
           color: $black;
           font-family: "BungeeHairline";
           -webkit-text-stroke: $black 2px;
+
+          &#review{
+            background-color: $red;
+          }
+
+          &#new{
+            background-color: $green;
+          }
         }
       
         &.dark{

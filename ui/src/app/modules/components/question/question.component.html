@@ -18,7 +18,13 @@
   </div>
 
   <div class="lower {{getTheme()}}">
-    <button *ngFor="let a of answers" class="{{getTheme()}}" type="button">{{a}}</button>
+    <button 
+    (click)="checkAnswer(a, correct_answer)" 
+    *ngFor="let a of answers" 
+    class="{{getTheme()}} {{getResult(a, correct_answer)}}" 
+    type="button"
+    [disabled]="answered">{{a}}
+  </button>
   </div>
 
 </div>
