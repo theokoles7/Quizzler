@@ -125,6 +125,23 @@ div.outer{
           background-color: $bluesmoke;
         }
       }
+
+      &:disabled{
+        color: $black;
+        -webkit-text-stroke: $black 1px;
+
+        &.correct{
+          background-color: $green;
+        }
+
+        &.incorrect{
+          background-color: $red;
+        }
+
+        &:hover{
+          -webkit-text-stroke-width: 1px;
+        }
+      }
     }
   }
 }

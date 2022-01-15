@@ -1,0 +1,159 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/styles.scss';
+
+div.modal-backdrop{
+  background-color: rgba($black, 0.6);
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div.dialog{
+    padding: none;
+    position: fixed;
+    height: 20em;
+    width: 25em;
+    border-radius: .5em;
+    top: 20em;
+    z-index: 3;
+  
+    &.light, &.none{
+      background-color: $white;
+      outline: solid .5em $black;
+    }
+
+    &.dark{
+      outline: solid $shale .3em;
+      background-color: $midnite;
+
+      #light{
+        outline: solid $shale .3em;
+      }
+
+      #dark{
+        outline: solid $shale .3em;
+      }
+    }
+
+    div.upper{
+      font-family: "Bungee";
+      width: 100%;
+      height: 20%;
+
+      &.light, &.none{
+        background-color: $blue;
+        border-bottom: solid $black .5em;
+      }
+
+      &.dark{
+        background-color: $bluesmoke;
+        border-bottom: solid $shale .3em;
+      }
+
+      h2{
+        text-align: center;
+        font-size: 3em;
+        -webkit-text-stroke: $black 3px;
+
+        &.light, &.none{
+          color: $yellow;
+        }
+
+        &.dark{
+          color: $silver;
+        }
+      }
+    }
+
+    div.middle{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 70%;
+
+      &.light, &.none{
+        background-color: $white;
+      }
+
+      &.dark{
+        background-color: $midnite;
+      }
+
+      div.setting{
+        display: inline-flex;
+        flex-direction: row;
+        padding: 1em;
+        justify-content: space-evenly;
+
+        &.light, &.none{
+          color: $black;
+          -webkit-text-stroke: $black 2px;
+        }
+
+        &.dark{
+          color: $silver;
+          -webkit-text-stroke: $silver 2px;
+        }
+
+        h3{
+          padding-left: .5em;
+          padding-top: .25em;
+          font-family: "BungeeHairline";
+          vertical-align: middle;
+          text-align: center;
+        }
+      }
+    }
+
+    div.lower{
+      height: 20%;
+
+      &.light, &.none{
+        border-top: solid $black .5em;
+      }
+
+      &.dark{
+        border-top: solid $shale .3em;
+      }
+
+      button{
+        width: 50%;
+        height: 100%;
+        font-size: 1.5em;
+        border: none;
+      
+        &.light, &.none{
+          color: $black;
+          font-family: "BungeeHairline";
+          -webkit-text-stroke: $black 2px;
+
+          &#review{
+            background-color: $red;
+          }
+
+          &#new{
+            background-color: $green;
+          }
+        }
+      
+        &.dark{
+          background-color: $bluesmoke;
+          color: $silver;
+          font-family: "BungeeHairline";
+          -webkit-text-stroke: $silver 2px;
+        }
+
+        &:hover{
+          -webkit-text-stroke-width: 3px;
+        }
+      }
+    }
+  }
+}

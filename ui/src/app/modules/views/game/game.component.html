@@ -13,13 +13,27 @@
       [difficulty]="q.difficulty"
       [question]="q.question" 
       [correct_answer]="q.correct_answer" 
-      [incorrect_answers]="q.incorrect_answers">
+      [incorrect_answers]="q.incorrect_answers"
+      (answerCorrect)="answerCorrect()"
+      (answerIncorrect)="answerIncorrect()">
       </q-question>
     </div>
   </div>
 
   <div class="scoreboard">
-    <q-scoreboard [theme]="theme"></q-scoreboard>
+    <q-scoreboard 
+    [theme]="theme"
+    [correct]="correct"
+    [incorrect]="incorrect"
+    [score]="score"
+    ></q-scoreboard>
   </div>
 
 </div>
+
+<q-game-over
+[theme]="theme"
+[score]="score"
+[correct]="correct"
+[incorrect]="incorrect"
+></q-game-over>

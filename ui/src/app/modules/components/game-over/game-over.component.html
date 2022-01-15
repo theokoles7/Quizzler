@@ -1,0 +1,25 @@
+<div class="modal-backdrop" *ngIf="visible">
+  <div class="dialog {{getTheme()}}">
+
+    <div class="upper {{getTheme()}}">
+      <h2 class="{{getTheme()}}">GAME OVER</h2>
+    </div>
+
+    <div class="middle {{getTheme()}}">
+      <div class="setting {{getTheme()}}">
+        <h3>Final Score: {{score}}</h3>
+      </div>
+        <div class="setting {{getTheme()}}">
+        <h3>Correct: {{correct}}</h3>
+      </div>
+        <div class="setting {{getTheme()}}">
+        <h3>Incorrect: {{incorrect}}</h3>
+      </div>
+    </div>
+
+    <div class="lower {{getTheme()}}">
+      <button class="{{getTheme()}}" (click)="hide()" type="button" id="review">REVIEW</button>
+      <button class="{{getTheme()}}" routerLink="/" type="button" id="new">NEW GAME</button>
+    </div>
+  </div>
+</div>

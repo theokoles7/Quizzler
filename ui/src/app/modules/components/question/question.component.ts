@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Themes, themeToString } from '../../domain/Theme';
 import { Categories, shortCat } from '../../domain/Category';
 
@@ -17,6 +17,16 @@ export class QuestionComponent implements OnInit {
   @Input() correct_answer!: any;
   @Input() incorrect_answers!: any;
   answers!: any;
+  answered: boolean = false;
+
+  @Output() answerCorrect: EventEmitter<void> = new EventEmitter();
+  @Output() answerIncorrect: EventEmitter<void> = new EventEmitter();
+
+  checkAnswer(s: string, a: string): void{
+    if (s === a){this.answerCorrect.emit();}
+    else{this.answerIncorrect.emit();}
+    this.answered = true;
+  }
 
   private combineAnswers() {
     this.answers = this.incorrect_answers;
@@ -30,6 +40,11 @@ export class QuestionComponent implements OnInit {
 
   getTheme(): string {
     return themeToString(this.theme);
+  }
+
+  getResult(s: string, a: string): string{
+    if (s === a){return "correct";}
+    else{return "incorrect";}
   }
 
   private shuffle(arr: string[]): void {

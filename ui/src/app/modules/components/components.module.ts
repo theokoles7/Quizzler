@@ -7,6 +7,7 @@ import { SettingsDialogComponent } from './settings-dialog/settings-dialog.compo
 import { QuestionComponent } from './question/question.component';
 import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 import { GameboardComponent } from './gameboard/gameboard.component';
+import { GameOverComponent } from './game-over/game-over.component';
 
 
 
@@ -18,6 +19,7 @@ import { GameboardComponent } from './gameboard/gameboard.component';
     QuestionComponent,
     ScoreboardComponent,
     GameboardComponent,
+    GameOverComponent,
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { GameboardComponent } from './gameboard/gameboard.component';
     SettingsDialogComponent,
     QuestionComponent,
     ScoreboardComponent,
-    GameboardComponent
+    GameboardComponent,
+    GameOverComponent
   ]
 })
 export class ComponentsModule { }
