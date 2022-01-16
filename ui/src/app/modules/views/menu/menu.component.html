@@ -1,87 +1,89 @@
-<div class="menu {{getTheme()}}">
+<div class="wrapper">
+  <div class="menu {{getTheme()}}">
 
-  <div class="upper {{getTheme()}}">
-    <h2 class="{{getTheme()}}">NEW GAME</h2>
-  </div>
-
-  <div class="middle {{getTheme()}}">
-
-    <div id="labels">
-      <div class="label">
-        <h3 class="{{getTheme()}}">Amount: {{amount}}</h3>
+    <div class="upper {{getTheme()}}">
+      <h2 class="{{getTheme()}}">NEW GAME</h2>
+    </div>
+  
+    <div class="middle {{getTheme()}}">
+  
+      <div id="labels">
+        <div class="label">
+          <h3 class="{{getTheme()}}">Amount: {{amount}}</h3>
+        </div>
+  
+        <div class="label">
+          <h3 class="{{getTheme()}}">Category:</h3>
+        </div>
+  
+        <div class="label">
+          <h3 class="{{getTheme()}}">Difficulty:</h3>
+        </div>
+  
+        <div class="label">
+          <h3 class="{{getTheme()}}">Type:</h3>
+        </div>
       </div>
-
-      <div class="label">
-        <h3 class="{{getTheme()}}">Category:</h3>
-      </div>
-
-      <div class="label">
-        <h3 class="{{getTheme()}}">Difficulty:</h3>
-      </div>
-
-      <div class="label">
-        <h3 class="{{getTheme()}}">Type:</h3>
+  
+      <div id="options">
+        
+        <div class="option">
+          <input class="{{getTheme()}}" (change)="setAmount($any($event.target).value)"
+          id="amount" type="range" min="0" max="50" value="{{amount}}">
+        </div>
+  
+        <div class="option">
+          <select class="{{getTheme()}}" (change)="setCategory($any($event.target).value)" id="category" value="{{category}}">
+            <option value=0 >Any</option>
+            <option value=9 >General Knowledge</option>
+            <option value=10>Books</option>
+            <option value=11>Film</option>
+            <option value=12>Music</option>
+            <option value=13>Theater</option>
+            <option value=14>Television</option>
+            <option value=15>Video Games</option>
+            <option value=16>Board Games</option>
+            <option value=17>Science</option>
+            <option value=18>Computers</option>
+            <option value=19>Mathematics</option>
+            <option value=20>Mythology</option>
+            <option value=21>Sports</option>
+            <option value=22>Geography</option>
+            <option value=23>History</option>
+            <option value=24>Politics</option>
+            <option value=25>Art</option>
+            <option value=26>Celebrities</option>
+            <option value=27>Animals</option>
+            <option value=28>Vehicles</option>
+            <option value=29>Comics</option>
+            <option value=31>Anime & Manga</option>
+            <option value=32>Cartoons</option>
+          </select>
+        </div>
+  
+        <div class="option">
+          <select class="{{getTheme()}}" (change)="setDifficulty($any($event.target).value)" id="difficulty" value="{{difficulty}}">
+            <option value="any"     >Any</option>
+            <option value="easy"    >Easy</option>
+            <option value="medium"  >Medium</option>
+            <option value="hard"    >Hard</option>
+          </select>
+        </div>
+  
+        <div class="option">
+          <select class="{{getTheme()}}" (change)="setType($any($event.target).value)" id="type" value="{{type}}">
+            <option value="any"       >Any</option>
+            <option value="multiple"  >Multiple Choice</option>
+            <option value="boolean"   >True/False</option>
+          </select>
+        </div>
       </div>
     </div>
-
-    <div id="options">
-      
-      <div class="option">
-        <input class="{{getTheme()}}" (change)="setAmount($any($event.target).value)"
-        id="amount" type="range" min="0" max="50" value="{{amount}}">
-      </div>
-
-      <div class="option">
-        <select class="{{getTheme()}}" (change)="setCategory($any($event.target).value)" id="category" value="{{category}}">
-          <option value=0 >Any</option>
-          <option value=9 >General Knowledge</option>
-          <option value=10>Books</option>
-          <option value=11>Film</option>
-          <option value=12>Music</option>
-          <option value=13>Theater</option>
-          <option value=14>Television</option>
-          <option value=15>Video Games</option>
-          <option value=16>Board Games</option>
-          <option value=17>Science</option>
-          <option value=18>Computers</option>
-          <option value=19>Mathematics</option>
-          <option value=20>Mythology</option>
-          <option value=21>Sports</option>
-          <option value=22>Geography</option>
-          <option value=23>History</option>
-          <option value=24>Politics</option>
-          <option value=25>Art</option>
-          <option value=26>Celebrities</option>
-          <option value=27>Animals</option>
-          <option value=28>Vehicles</option>
-          <option value=29>Comics</option>
-          <option value=31>Anime & Manga</option>
-          <option value=32>Cartoons</option>
-        </select>
-      </div>
-
-      <div class="option">
-        <select class="{{getTheme()}}" (change)="setDifficulty($any($event.target).value)" id="difficulty" value="{{difficulty}}">
-          <option value="any"     >Any</option>
-          <option value="easy"    >Easy</option>
-          <option value="medium"  >Medium</option>
-          <option value="hard"    >Hard</option>
-        </select>
-      </div>
-
-      <div class="option">
-        <select class="{{getTheme()}}" (change)="setType($any($event.target).value)" id="type" value="{{type}}">
-          <option value="any"       >Any</option>
-          <option value="multiple"  >Multiple Choice</option>
-          <option value="boolean"   >True/False</option>
-        </select>
-      </div>
+  
+    <div class="lower {{getTheme()}}">
+      <button class="{{getTheme()}}" (click)="clearMenu()" id="clear" type="button">CLEAR</button>
+      <button class="{{getTheme()}}" (click)="beginGame()" id="begin" type="button">BEGIN</button>
     </div>
+  
   </div>
-
-  <div class="lower {{getTheme()}}">
-    <button class="{{getTheme()}}" (click)="clearMenu()" id="clear" type="button">CLEAR</button>
-    <button class="{{getTheme()}}" (click)="beginGame()" id="begin" type="button">BEGIN</button>
-  </div>
-
 </div>
