@@ -23,7 +23,7 @@ export class QuestionComponent implements OnInit {
   @Output() answerIncorrect: EventEmitter<void> = new EventEmitter();
 
   checkAnswer(s: string, a: string): void{
-    if (this.cleanString(s)=== a){this.answerCorrect.emit();}
+    if (this.cleanString(s)=== this.cleanString(a)){this.answerCorrect.emit();}
     else{this.answerIncorrect.emit();}
     this.answered = true;
   }
@@ -78,6 +78,8 @@ export class QuestionComponent implements OnInit {
     s = s.replace(/&hellip;/gi, "...");
     s = s.replace(/&lrm;/gi, "");
     s = s.replace(/&auml;/gi, "a");
+    s = s.replace(/&ndash;/gi, "-");
+    s = s.replace(/&mdash;/gi, "-");
     return s;
   }
 
