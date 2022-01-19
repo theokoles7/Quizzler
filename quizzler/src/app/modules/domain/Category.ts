@@ -97,7 +97,7 @@ export function shortCat(cat: string): string{
     case "Entertainment: Books": return "Books";
     case "Entertainment: Film": return "Film";
     case "Entertainment: Music": return "Music";
-    case "Entertainment: Musicals Theatres": return "Theater";
+    case "Entertainment: Musicals & Theatres": return "Theater & Musicals";
     case "Entertainment: Television": return "Television";
     case "Entertainment: Video Games": return "Video Games";
     case "Entertainment: Board Games": return "Board Games";
