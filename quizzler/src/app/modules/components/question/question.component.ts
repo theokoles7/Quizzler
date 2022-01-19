@@ -58,7 +58,7 @@ export class QuestionComponent implements OnInit {
 
   private cleanString(s: string): string{
     s = s.replace(/&quot;/gi, "\"");
-    s = s.replace(/&#039;/gi, "\"");
+    s = s.replace(/&#039;/gi, "\'");
     s = s.replace(/&amp;/gi, "&");
     s = s.replace(/&euml;/gi, "e");
     s = s.replace(/&ecirc;/gi, "e");
