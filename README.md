@@ -6,38 +6,39 @@ Quizzler is an online quiz game to test your knowledge on a wide range of topics
 
 1. Choose the amount of questions you want (1 - 50).
 2. Choose your preferred category:
-  a. General Knowledge
-  b. Books
-  c. Film
-  d. Music
-  e. Theater
-  f. Television
-  g. Video Games
-  h. Board Games
-  i. Science
-  j. Computers
-  k. Mathematics
-  l. Mythology
-  m. Sports
-  n. Geography
-  o. History
-  p. Politics
-  q. Art
-  r. Celebrities
-  s. Animals
-  t. Vehicles
-  u. Comics
-  v. Anime & Manga
-  w. Cartoons
+	* General Knowledge
+	* Books
+	* Film
+	* Music
+	* Theater
+	* Television
+	* Video Games
+	* Board Games
+	* Science
+	* Computers
+	* Mathematics
+	* Mythology
+	* Sports
+	* Geography
+	* History
+	* Politics
+	* Art
+	* Celebrities
+	* Animals
+	* Vehicles
+	* Comics
+	* Anime & Manga
+	* Cartoons
 3. Choose your difficulty:
-  a. Easy
-  b. Medium
-  c. Hard
+	* Easy
+	* Medium
+	* Hard
 4. Choose what type of questions you want:
-  a. Multiple Choice
-  b. True/False
-5. Press Begin!!
+	* Multiple Choice
+	* True/False
+5. Press "Begin" and enjoy!!
 
 (Note: Leaving any of the selection boxes on "ANY" will simply result in a mix of the respective option)
 
-This project was made using the Open Trivia Database (https://opentdb.com/) API.
+This project was made using the Open Trivia Database (https://opentdb.com/) API. 
+Leave a comment. Any and all feedback is welcome!
