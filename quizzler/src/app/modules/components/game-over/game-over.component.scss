@@ -17,11 +17,11 @@ div.modal-backdrop{
 
   div.dialog{
     padding: none;
-    position: fixed;
-    height: 20em;
-    width: 25em;
+    position: absolute;
+    height: 40%;
+    width: 25%;
     border-radius: .5em;
-    top: 20em;
+    top: 30%;
     z-index: 3;
   
     &.light, &.none{
