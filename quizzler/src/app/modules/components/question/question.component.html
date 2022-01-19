@@ -19,9 +19,9 @@
 
   <div class="lower {{getTheme()}}">
     <button 
-    (click)="checkAnswer(a, correct_answer)" 
+    (click)="checkAnswer(a)" 
     *ngFor="let a of answers" 
-    class="{{getTheme()}} {{getResult(a, correct_answer)}}" 
+    class="{{getTheme()}} {{getResult(a)}}" 
     type="button"
     [disabled]="answered">{{a}}
   </button>

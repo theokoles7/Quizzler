@@ -22,8 +22,8 @@ export class QuestionComponent implements OnInit {
   @Output() answerCorrect: EventEmitter<void> = new EventEmitter();
   @Output() answerIncorrect: EventEmitter<void> = new EventEmitter();
 
-  checkAnswer(s: string, a: string): void{
-    if (this.cleanString(s)=== this.cleanString(a)){this.answerCorrect.emit();}
+  checkAnswer(s: string): void{
+    if (s == this.cleanString(this.correct_answer)){this.answerCorrect.emit();}
     else{this.answerIncorrect.emit();}
     this.answered = true;
   }
@@ -42,8 +42,8 @@ export class QuestionComponent implements OnInit {
     return themeToString(this.theme);
   }
 
-  getResult(s: string, a: string): string{
-    if (s === a){return "correct";}
+  getResult(s: string): string{
+    if (s === this.cleanString(this.correct_answer)){return "correct";}
     else{return "incorrect";}
   }
 
@@ -80,6 +80,8 @@ export class QuestionComponent implements OnInit {
     s = s.replace(/&auml;/gi, "a");
     s = s.replace(/&ndash;/gi, "-");
     s = s.replace(/&mdash;/gi, "-");
+    s = s.replace(/&lsquo;/gi, "\'");
+    s = s.replace(/&rsquo;/gi, "\'");
     return s;
   }
 
