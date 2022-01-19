@@ -112,6 +112,21 @@ div.outer{
           -webkit-text-stroke-width: 2px;
           background-color: $yellow;
         }
+
+        &:disabled{
+  
+          &.correct{
+            background-color: $green;
+          }
+  
+          &.incorrect{
+            background-color: $red;
+          }
+  
+          &:hover{
+            -webkit-text-stroke-width: 1px;
+          }
+        }
       }
 
       &.dark{
@@ -124,22 +139,21 @@ div.outer{
           -webkit-text-stroke-width: 2px;
           background-color: $bluesmoke;
         }
-      }
 
-      &:disabled{
-        color: $black;
-        -webkit-text-stroke: $black 1px;
-
-        &.correct{
-          background-color: $green;
-        }
-
-        &.incorrect{
-          background-color: $red;
-        }
-
-        &:hover{
-          -webkit-text-stroke-width: 1px;
+        &:disabled{
+  
+          &.correct{
+            outline-color: $green;
+          }
+  
+          &.incorrect{
+            outline-color: $red;
+          }
+  
+          &:hover{
+            -webkit-text-stroke-width: 1px;
+            background-color: transparent;
+          }
         }
       }
     }
