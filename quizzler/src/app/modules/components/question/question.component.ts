@@ -82,6 +82,7 @@ export class QuestionComponent implements OnInit {
     s = s.replace(/&mdash;/gi, "-");
     s = s.replace(/&lsquo;/gi, "\'");
     s = s.replace(/&rsquo;/gi, "\'");
+    s = s.replace(/&aring;/gi, "a");
     return s;
   }
 
