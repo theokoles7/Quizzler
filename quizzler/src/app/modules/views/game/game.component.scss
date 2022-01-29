@@ -19,6 +19,11 @@ div.game{
     padding-bottom: 13%;
     overflow: scroll;
     scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    &::webkit-scrollbar{
+      display: none
+    }
   
     div.question{
       text-align: center;
