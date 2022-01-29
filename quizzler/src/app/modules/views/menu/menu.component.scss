@@ -124,12 +124,38 @@ div.wrapper{
                 height: 2em;
                 border-radius: 1em;
                 outline: solid $black 0.3em;
+  
+                &:hover{
+                  cursor: pointer;
+                  outline-width: 0.35em;
+                }
+              }
+
+              &::-webkit-slider-thumb{
+                -webkit-appearance: none;
+                background: $yellow;
+                width: 2em;
+                height: 2em;
+                border-radius: 1em;
+                outline: solid $black 0.3em;
+  
+                &:hover{
+                  cursor: pointer;
+                  outline-width: 0.35em;
+                }
               }
     
               &::-moz-range-track{
                 background: $red;
                 height: 1.25em;
                 border-radius: 0.5em;
+                outline: solid $black 0.3em;
+              }
+
+              &::-webkit-slider-runnable-track{
+                background: $red;
+                height: 1.25em;
+                border-radius: 1em;
                 outline: solid $black 0.3em;
               }
             }
@@ -145,12 +171,33 @@ div.wrapper{
                 outline: solid $periwinkle 0.1em;
   
                 &:hover{
-                  background: $periwinkle;
+                  outline-width: 0.2em;
+                  cursor: pointer;
+                }
+              }
+
+              &::-webkit-slider-thumb{
+                -webkit-appearance: none;
+                background: $silver;
+                width: 2em;
+                height: 2em;
+                border-radius: 1em;
+                outline: solid $periwinkle 0.1em;
+  
+                &:hover{
+                  outline-width: 0.2em;
                   cursor: pointer;
                 }
               }
     
               &::-moz-range-track{
+                background: $bluesmoke;
+                height: 1.25em;
+                border-radius: 0.5em;
+                outline: solid $shale 0.2em;
+              }
+
+              &::-webkit-runnable-slider-track{
                 background: $bluesmoke;
                 height: 1.25em;
                 border-radius: 0.5em;
