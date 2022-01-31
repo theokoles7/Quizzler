@@ -43,7 +43,8 @@ div.wrapper{
   
       h2{
         font-family: "Bungee";
-        font-size: 3.75em;
+        height: 100%;
+        font-size: 3.5em;
         text-align: center;
         -webkit-text-stroke: $black 3px;
   
@@ -114,6 +115,7 @@ div.wrapper{
     
           input[type=range]{
             width: 100%;
+            -webkit-appearance: none;
   
             &.light, &.none{
               background-color: $white;
@@ -133,6 +135,20 @@ div.wrapper{
 
               &::-webkit-slider-thumb{
                 -webkit-appearance: none;
+                background: $yellow;
+                width: 1.3em;
+                height: 1.3em;
+                border-radius: 1em;
+                outline: solid $black 0.3em;
+                margin-top: -.2%;
+  
+                &:hover{
+                  cursor: pointer;
+                  outline-width: 0.35em;
+                }
+              }
+
+              &::-ms-thumb{
                 background: $yellow;
                 width: 2em;
                 height: 2em;
@@ -264,7 +280,7 @@ div.wrapper{
   
       button{
         width: 50%;
-        height: 2em;
+        height: 100%;
         border: none;
         font-family: "BungeeHairline";
         font-size: 2.3em;
