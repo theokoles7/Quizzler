@@ -18,8 +18,8 @@ div.modal-backdrop{
   div.dialog{
     padding: none;
     position: fixed;
-    height: 20em;
-    width: 25em;
+    height: 35%;
+    width: 25%;
     border-radius: .5em;
     top: 20em;
   
@@ -53,6 +53,9 @@ div.modal-backdrop{
       font-family: "Bungee";
       width: 100%;
       height: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
 
       &.light, &.none{
         background-color: $yellow;
@@ -65,8 +68,9 @@ div.modal-backdrop{
       }
 
       h2{
+        margin-bottom: -.5%;
         text-align: center;
-        font-size: 3em;
+        font-size: 3.5vw;
         -webkit-text-stroke: $black 3px;
 
         &.light, &.none{
@@ -83,6 +87,7 @@ div.modal-backdrop{
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+      align-items: center;
       height: 60%;
 
       &.light, &.none{
@@ -94,9 +99,11 @@ div.modal-backdrop{
       }
 
       div.setting{
-        display: inline-flex;
+        display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
         padding: 1em;
+        width: 100%;
 
         &.light, &.none{
           color: $black;
@@ -109,21 +116,26 @@ div.modal-backdrop{
         }
 
         h3{
-          padding-left: .5em;
           padding-top: .25em;
+          width: 50%;
           font-family: "BungeeHairline";
+          font-size: 2vw;
           vertical-align: middle;
           text-align: center;
         }
 
         div.button-group{
-          margin-left: 4em;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          width: 50%;
 
           button{
-            width: 5em;
-            height: 3em;
+            width: 40%;
+            height: 100%;
             text-align: center;
             font-family: "BungeeHairline";
+            font-size: 1vw;
           }
 
           #light{
@@ -166,7 +178,7 @@ div.modal-backdrop{
       button{
         width: 100%;
         height: 100%;
-        font-size: 1.5em;
+        font-size: 1.75vw;
         border: none;
       
         &.light, &.none{
