@@ -7,7 +7,7 @@ div.outer{
   width: 80%;
   height: 30em;
   border-radius: 0.5em;
-  box-shadow: 0px 5px 10px 10px $black;
+  box-shadow: 0px 5px 10px 10px $gray;
 
   &.light, &.none{
     outline: solid $black 0.5em;
