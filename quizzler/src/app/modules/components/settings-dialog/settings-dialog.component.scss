@@ -26,6 +26,14 @@ div.modal-backdrop{
     &.light, &.none{
       background-color: $white;
       outline: solid .5em $black;
+
+      #light{
+        outline: solid $black .3em;
+      }
+
+      #dark{
+        outline: solid $black .3em;
+      }
     }
 
     &.dark{
@@ -116,10 +124,6 @@ div.modal-backdrop{
             height: 3em;
             text-align: center;
             font-family: "BungeeHairline";
-          }
-
-          #light, #dark{
-            outline: solid $black .3em;
           }
 
           #light{

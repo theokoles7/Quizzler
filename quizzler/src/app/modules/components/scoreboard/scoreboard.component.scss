@@ -14,16 +14,17 @@ div.wrapper{
     width: 70%;
     height: 100%;
     margin-right: auto;
-    box-shadow: 10px 5px 20px 10px $gray;
   
     &.light, &.none{
       background-color: $white;
       outline: solid $black 0.3em;
+      box-shadow: 10px 5px 20px 10px $gray;
     }
   
     &.dark{
       background-color: $midnite;
       outline: solid $shale 0.3em;
+      box-shadow: 10px 5px 20px 10px $bluesmoke;
     }
   
     div.upper{
