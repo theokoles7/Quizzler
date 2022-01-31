@@ -12,7 +12,7 @@ nav{
     margin-left: 2em;
     margin-top: .15em;
     font-family: "Bungee";
-    font-size: 3.5em;
+    font-size: 4vw;
     -webkit-text-stroke: 3px $black;
   }
 
@@ -67,9 +67,10 @@ nav{
   button{
     background-color: transparent;
     border: none;
+    padding-top: .8em;
 
     i{
-      font-size: 3em;
+      font-size: 3vw;
       margin-right: 2em;
       -webkit-text-stroke: 3px $black;
     }
