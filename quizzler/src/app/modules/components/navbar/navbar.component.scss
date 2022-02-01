@@ -20,8 +20,7 @@ nav{
     h1, i{
       color: $silver;
     }
-
-    outline: solid $shale .3em;
+    border-bottom: solid $shale .3em;
     background-color: $bluesmoke;
 
     h1:hover, i:hover{
@@ -37,8 +36,7 @@ nav{
     h1:hover, i:hover{
       color: $red;
     }
-
-    outline: solid $black .4em;
+    border-bottom: solid black .3em;
     background-color: $blue;
   }
 
