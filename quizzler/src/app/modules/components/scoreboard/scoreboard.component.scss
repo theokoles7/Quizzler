@@ -83,6 +83,7 @@ div.wrapper{
         font-family: "Bungee";
         text-align: center;
         font-size: 3em;
+        margin-bottom: -.5%;
 
         @media only screen and (max-width: 768px){
           font-size: 1em;
@@ -128,8 +129,7 @@ div.wrapper{
 
         @media only screen and (max-width: 768px){
           font-size: .7em;
-          margin-top: -8px;
-          margin-bottom: -8px;
+          margin-top: -2%;
         }
         
         &.light, &.none{
