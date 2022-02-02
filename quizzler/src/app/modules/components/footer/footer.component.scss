@@ -14,6 +14,10 @@ footer{
     color: $black;
     -webkit-text-stroke: 1px $black;
 
+    @media only screen and (max-width: 768px){
+      -webkit-text-stroke-width: .5px;
+    }
+
     i, a{
       color: $black;
     }
@@ -24,6 +28,10 @@ footer{
     background-color: $bluesmoke;
     color: $silver;
     -webkit-text-stroke: 1px $silver;
+
+    @media only screen and (max-width: 768px){
+      -webkit-text-stroke-width: .5px;
+    }
 
     i, a{
       color: $silver;
@@ -36,6 +44,11 @@ footer{
     justify-content: space-evenly;
     width: 100%;
 
+    @media only screen and (max-width: 425px){
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
     div.item{
       width: 50%;
       display: flex;
@@ -43,7 +56,16 @@ footer{
       justify-content: space-evenly;
 
       font-family: "BungeeHairline";
-      font-size: 1.2vw;
+      font-size: 1.2em;
+
+      @media only screen and (max-width: 768px){
+        font-size: .75em;
+      }
+
+      @media only screen and (max-width: 425px){
+        flex-direction: row;
+        width: 100%;
+      }
 
       i:hover, a:hover{
         -webkit-text-stroke-width: 2px;
