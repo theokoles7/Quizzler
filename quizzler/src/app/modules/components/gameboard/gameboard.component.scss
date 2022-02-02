@@ -9,22 +9,41 @@ div.wrapper{
   flex-direction: column;
   justify-content: space-evenly;
 
+  @media only screen and (max-width: 768px){
+    height: 100%;
+    margin-top: 0;
+    justify-content: center;
+  }
+
   div.outer{
     border-radius: 0.5em;
     width: 70%;
     height: 100%;
     margin-left: auto;
+
+    @media only screen and (max-width: 768px){
+      margin-right: auto;
+      width: 95%;
+    }
   
     &.light, &.none{
       background-color: $white;
       outline: solid $black 0.3em;
       box-shadow: -10px 5px 20px 10px $gray;
+
+      @media only screen and (max-width: 768px){
+        outline-width: .15em;
+      }
     }
   
     &.dark{
       background-color: $midnite;
       outline: solid $shale 0.3em;
       box-shadow: -10px 5px 20px 10px $bluesmoke;
+
+      @media only screen and (max-width: 768px){
+        outline-width: .15em;
+      }
     }
   
     div.upper{
@@ -33,30 +52,57 @@ div.wrapper{
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+      border-radius: .5em .5em 0 0;
+
+      @media only screen and (max-width: 768px){
+        flex-direction: row;
+        justify-content:center;
+        height: 30%;
+      }
 
       &.light, &.none{
         border-bottom: solid $black 0.3em;
         background-color: $blue;
+
+        @media only screen and (max-width: 768px){
+          border-bottom-width: .2em;
+        }
       }
 
       &.dark{
         border-bottom: solid $shale 0.3em;
         background-color: $bluesmoke;
+
+        @media only screen and (max-width: 768px){
+          border-bottom-width: .2em;
+        }
       }
 
       h4{
         font-family: "Bungee";
         text-align: center;
-        font-size: 3vw;
+        font-size: 3em;
+
+        @media only screen and (max-width: 768px){
+          font-size: 1em;
+        }
 
         &.light, &.none{
           color: $yellow;
           -webkit-text-stroke: $black 2px;
+
+          @media only screen and (max-width: 768px){
+            -webkit-text-stroke-width: 1px;
+          }
         }
 
         &.dark{
           color: $silver;
           -webkit-text-stroke: $black 2px;
+
+          @media only screen and (max-width: 768px){
+            -webkit-text-stroke-width: 1px;
+          }
         }
       }
     }
@@ -69,19 +115,36 @@ div.wrapper{
       justify-content: space-evenly;
       padding: 1em;
 
+      @media only screen and (max-width: 768px){
+        height: 50%;
+        flex-direction: row;
+      }
+
       h5{
         font-family: "BungeeHairline";
         text-align: center;
-        font-size: 2vw;
+        font-size: 2em;
+
+        @media only screen and (max-width: 768px){
+          font-size: .6em;
+        }
         
         &.light, &.none{
           color: $black;
           -webkit-text-stroke: $black 1px;
+
+          @media only screen and (max-width: 768px){
+            -webkit-text-stroke-width: .5px;
+          }
         }
 
         &.dark{
           color: $silver;
           -webkit-text-stroke: $silver 1px;
+
+          @media only screen and (max-width: 768px){
+            -webkit-text-stroke-width: .5px;
+          }
         }
       }
     }
