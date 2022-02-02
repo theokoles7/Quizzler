@@ -74,18 +74,21 @@ nav{
   button{
     background-color: transparent;
     border: none;
-    //padding-top: .8em;
     width: auto;
     height: auto;
 
+    @media only screen and (max-width: 768px){
+        padding-bottom: .3em;
+    }
+
     i{
+      font-size: 3em;
+      -webkit-text-stroke: 3px $black;
+
       @media only screen and (max-width: 768px){
           font-size: 1.75em;
           -webkit-text-stroke: 2px $black;
       }
-
-      font-size: 3em;
-      -webkit-text-stroke: 3px $black;
     }
   }
 }
