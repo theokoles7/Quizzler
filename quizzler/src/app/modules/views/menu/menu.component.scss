@@ -10,7 +10,9 @@ div.wrapper{
 
   div.menu{
     border-radius: 0.5em;
-    width: 50em;
+    width: auto;
+    max-width: 90%;
+    min-width: none;
     height: 30em;
     margin-top: 10%;
     margin-left: auto;
