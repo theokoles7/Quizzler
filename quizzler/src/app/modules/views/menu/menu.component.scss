@@ -219,8 +219,8 @@ div.wrapper{
   
               &::-ms-thumb{
                 background: $yellow;
-                width: 2em;
-                height: 2em;
+                width: 1.3em;
+                height: 1.3em;
                 border-radius: 1em;
                 outline: solid $black 0.3em;
 
@@ -280,10 +280,11 @@ div.wrapper{
               &::-webkit-slider-thumb{
                 -webkit-appearance: none;
                 background: $silver;
-                width: 2em;
-                height: 2em;
+                width: 1.3em;
+                height: 1.3em;
                 border-radius: 1em;
                 outline: solid $periwinkle 0.1em;
+                margin-top: -.2%;
 
                 @media only screen and (max-width: 768px){
                   outline: solid $periwinkle 0.1em;
@@ -292,6 +293,22 @@ div.wrapper{
                 &:hover{
                   outline-width: 0.2em;
                   cursor: pointer;
+                }
+              }
+
+              &::-ms-thumb{
+                background: $silver;
+                height: 1.3em;
+                border-radius: 1em;
+                outline: solid $periwinkle 0.1em;
+
+                @media only screen and (max-width: 768px){
+                  outline: solid $periwinkle 0.1em;
+                }
+  
+                &:hover{
+                  cursor: pointer;
+                  outline-width: 0.35em;
                 }
               }
     
@@ -306,7 +323,7 @@ div.wrapper{
                 }
               }
   
-              &::-webkit-runnable-slider-track{
+              &::-webkit-slider-runnable-track{
                 background: $bluesmoke;
                 height: 1.25em;
                 border-radius: 0.5em;
