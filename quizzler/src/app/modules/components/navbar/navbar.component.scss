@@ -9,10 +9,14 @@ nav{
   }
   
   h1{
-    margin-left: 2em;
-    margin-top: .15em;
+    @media only screen and (max-width: 768px){
+        font-size: 2em;
+        -webkit-text-stroke: 2px $black;
+    }
+
     font-family: "Bungee";
-    font-size: 4vw;
+    font-size: 4em;
+    text-align: left;
     -webkit-text-stroke: 3px $black;
   }
 
@@ -48,6 +52,11 @@ nav{
       height: auto;
       width: 100%;
 
+      div.wing{
+        width: 100%;
+        height: 100%;
+      }
+
       #left{
         display: inline-flex;
         justify-content: flex-start;
@@ -65,11 +74,17 @@ nav{
   button{
     background-color: transparent;
     border: none;
-    padding-top: .8em;
+    //padding-top: .8em;
+    width: auto;
+    height: auto;
 
     i{
-      font-size: 3vw;
-      margin-right: 2em;
+      @media only screen and (max-width: 768px){
+          font-size: 1.75em;
+          -webkit-text-stroke: 2px $black;
+      }
+
+      font-size: 3em;
       -webkit-text-stroke: 3px $black;
     }
   }
