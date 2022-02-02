@@ -3,45 +3,78 @@
 
 div.wrapper{
   width: 100%;
-  height: 75%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 
   div.menu{
     border-radius: 0.5em;
+
     width: auto;
     max-width: 90%;
-    min-width: none;
-    height: 30em;
-    margin-top: 10%;
+    min-width: 50%;
+
+    height: auto;
+    max-height: 90%;
+    min-height: 50%;
     margin-left: auto;
     margin-right: auto;
+
+    @media only screen and (max-width: 768px){
+      min-width: 40%;
+    }
+
+    @media only screen and (max-width: 425px){
+      min-width: 90%;
+    }
   
     &.light, &.none{
       background-color: $white;
       outline: solid $black 0.5em;
       box-shadow: 0px 5px 10px 10px $gray;
+
+      @media only screen and (max-width: 768px){
+        outline-width: 0.25em;
+      }
     }
   
     &.dark{
       background-color: $midnite;
       outline: solid $shale 0.3em;
       box-shadow: 0px 5px 10px 10px $bluesmoke;
+
+      @media only screen and (max-width: 768px){
+        outline-width: 0.25em;
+      }
     }
   
     div.upper{
       height: 15%;
       width: 100%;
+      padding-left: 1em;
+      padding-right: 1em;
+
+      @media only screen and (max-width: 768px){
+        height: 10%;
+      }
   
       &.light, &.none{
         background-color: $blue;
         border-bottom: solid $black 0.5em;
+
+        @media only screen and (max-width: 768px){
+          border-bottom-width: 0.25em;
+        }
       }
   
       &.dark{
         background-color: $bluesmoke;
         border-bottom: solid $shale 0.3em;
+
+        @media only screen and (max-width: 768px){
+          border-bottom-width: 0.25em;
+        }
       }
   
       h2{
@@ -53,8 +86,8 @@ div.wrapper{
 
         @media only screen and (max-width: 768px){
           padding-top: .25em;
-          font-size: 2.5em;
-          -webkit-text-stroke: $black 2px;
+          font-size: 1.7em;
+          -webkit-text-stroke: $black 1px;
         }
   
         &.light, &.none{
@@ -70,7 +103,12 @@ div.wrapper{
     div.middle{
       height: 70%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      @media only screen and (max-width: 768px){
+        height: 80%;
+      }
   
       &.light, &.none{
         background-color: $white;
@@ -79,48 +117,63 @@ div.wrapper{
       &.dark{
         background-color: $midnite;
       }
-  
-      div#labels{
-        width: 50%;
+
+      div.setting{
+        height: 25%;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        height: 100%;
+        flex-direction: row;
+
+        @media only screen and (max-width: 768px){
+          flex-direction: column;
+          justify-content: space-around;
+        }
   
         div.label{
-          display: inline-flex;
           flex-direction: row;
-          height: 25%;
+          height: 100%;
+          width: 50%;
           padding: 1em;
+
+          @media only screen and (max-width: 768px){
+            width: 100%;
+            height: 50%;
+            padding: .5em;
+          }
   
           h3{
             font-family: "Bungee";
             font-size: 3em;
             height: 100%;
+            -webkit-text-stroke: $black 2px;
+
+            @media only screen and (max-width: 768px){
+              font-size: 1.4em;
+              -webkit-text-stroke-width: 1px;
+            }
     
             &.light, &.none{
               color: $yellow;
-              -webkit-text-stroke: $black 2px;
             }
     
             &.dark{
               color: $silver;
-              -webkit-text-stroke: $black 3px;
             }
           }
         }
-      }
-  
-      div#options{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-  
+    
         div.option{
           display: inline-flex;
           flex-direction: row;
-          height: 25%;
+          height: 100%;
+          width: 50%;
           padding: 1em;
+
+          @media only screen and (max-width: 768px){
+            width: 100%;
+            height: 50%;
+            padding: .5em;
+          }
     
           input[type=range]{
             width: 100%;
@@ -135,13 +188,17 @@ div.wrapper{
                 height: 2em;
                 border-radius: 1em;
                 outline: solid $black 0.3em;
+
+                @media only screen and (max-width: 768px){
+                  outline: solid $black 0.1em;
+                }
   
                 &:hover{
                   cursor: pointer;
                   outline-width: 0.35em;
                 }
               }
-
+  
               &::-webkit-slider-thumb{
                 -webkit-appearance: none;
                 background: $yellow;
@@ -150,19 +207,27 @@ div.wrapper{
                 border-radius: 1em;
                 outline: solid $black 0.3em;
                 margin-top: -.2%;
+
+                @media only screen and (max-width: 768px){
+                  outline: solid $black 0.1em;
+                }
   
                 &:hover{
                   cursor: pointer;
                   outline-width: 0.35em;
                 }
               }
-
+  
               &::-ms-thumb{
                 background: $yellow;
                 width: 2em;
                 height: 2em;
                 border-radius: 1em;
                 outline: solid $black 0.3em;
+
+                @media only screen and (max-width: 768px){
+                  outline: solid $black 0.1em;
+                }
   
                 &:hover{
                   cursor: pointer;
@@ -175,13 +240,21 @@ div.wrapper{
                 height: 1.25em;
                 border-radius: 0.5em;
                 outline: solid $black 0.3em;
-              }
 
+                @media only screen and (max-width: 768px){
+                  outline: solid $black 0.1em;
+                }
+              }
+  
               &::-webkit-slider-runnable-track{
                 background: $red;
                 height: 1.25em;
                 border-radius: 1em;
                 outline: solid $black 0.3em;
+
+                @media only screen and (max-width: 768px){
+                  outline: solid $black 0.1em;
+                }
               }
             }
   
@@ -194,13 +267,17 @@ div.wrapper{
                 height: 2em;
                 border-radius: 1em;
                 outline: solid $periwinkle 0.1em;
+
+                @media only screen and (max-width: 768px){
+                  outline: solid $periwinkle 0.1em;
+                }
   
                 &:hover{
                   outline-width: 0.2em;
                   cursor: pointer;
                 }
               }
-
+  
               &::-webkit-slider-thumb{
                 -webkit-appearance: none;
                 background: $silver;
@@ -208,6 +285,10 @@ div.wrapper{
                 height: 2em;
                 border-radius: 1em;
                 outline: solid $periwinkle 0.1em;
+
+                @media only screen and (max-width: 768px){
+                  outline: solid $periwinkle 0.1em;
+                }
   
                 &:hover{
                   outline-width: 0.2em;
@@ -220,13 +301,21 @@ div.wrapper{
                 height: 1.25em;
                 border-radius: 0.5em;
                 outline: solid $shale 0.2em;
-              }
 
+                @media only screen and (max-width: 768px){
+                  outline: solid $shale 0.1em;
+                }
+              }
+  
               &::-webkit-runnable-slider-track{
                 background: $bluesmoke;
                 height: 1.25em;
                 border-radius: 0.5em;
                 outline: solid $shale 0.2em;
+
+                @media only screen and (max-width: 768px){
+                  outline: solid $shale 0.1em;
+                }
               }
             }
           }
@@ -241,16 +330,28 @@ div.wrapper{
             border: none;
             -moz-appearance: none;
             -webkit-appearance: none;
+
+            @media only screen and (max-width: 768px){
+              font-size: 1em;
+            }
   
             &.light, &.none{
               outline: solid $black 0.1em;
               background-color: $white;
               color: $black;
               -webkit-text-stroke: $black 2px;
+
+              @media only screen and (max-width: 768px){
+                -webkit-text-stroke: $black 1px;
+              }
   
               &:hover{
                 -webkit-text-stroke: $black 4px;
                 cursor: pointer;
+
+                @media only screen and (max-width: 768px){
+                  -webkit-text-stroke: $black 2px;
+                }
               }
             }
   
@@ -259,10 +360,18 @@ div.wrapper{
               background-color: $bluesmoke;
               color: $silver;
               -webkit-text-stroke: $silver 2px;
+
+              @media only screen and (max-width: 768px){
+                -webkit-text-stroke: $silver 1px;
+              }
   
               &:hover{
                 -webkit-text-stroke: $silver 4px;
                 cursor: pointer;
+
+                @media only screen and (max-width: 768px){
+                  -webkit-text-stroke: $silver 2px;
+                }
               }
             }
   
@@ -278,13 +387,25 @@ div.wrapper{
       height: 15%;
       display: flexbox;
       flex-direction: row;
+
+      @media only screen and (max-width: 768px){
+        height: 10%;
+      }
   
       &.light, &.none{
         border-top: solid $black 0.5em;
+
+        @media only screen and (max-width: 768px){
+          border-top-width: 0.25em;
+        }
       }
   
       &.dark{
         border-top: solid $shale 0.3em;
+
+        @media only screen and (max-width: 768px){
+          border-top-width: 0.25em;
+        }
       }
   
       button{
@@ -293,10 +414,18 @@ div.wrapper{
         border: none;
         font-family: "BungeeHairline";
         font-size: 2.3em;
+
+        @media only screen and (max-width: 768px){
+          font-size: 1.3em;
+        }
   
         &.light, &.none{
           color: $black;
           -webkit-text-stroke: $black 2px;
+
+          @media only screen and (max-width: 768px){
+            -webkit-text-stroke-width: 1px;
+          }
   
           &#clear{
             background-color: $red;
@@ -315,6 +444,10 @@ div.wrapper{
           color: $silver;
           -webkit-text-stroke: $silver 2px;
           background-color: $bluesmoke;
+
+          @media only screen and (max-width: 768px){
+            -webkit-text-stroke-width: 1px;
+          }
   
           &:hover{
             -webkit-text-stroke: $silver 4px;

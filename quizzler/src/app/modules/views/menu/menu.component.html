@@ -6,30 +6,24 @@
     </div>
   
     <div class="middle {{getTheme()}}">
+
+      <div class="setting">
   
-      <div id="labels">
         <div class="label">
           <h3 class="{{getTheme()}}">Amount: {{amount}}</h3>
         </div>
-  
-        <div class="label">
-          <h3 class="{{getTheme()}}">Category:</h3>
-        </div>
-  
-        <div class="label">
-          <h3 class="{{getTheme()}}">Difficulty:</h3>
-        </div>
-  
-        <div class="label">
-          <h3 class="{{getTheme()}}">Type:</h3>
-        </div>
-      </div>
-  
-      <div id="options">
         
         <div class="option">
           <input class="{{getTheme()}}" (change)="setAmount($any($event.target).value)"
           id="amount" type="range" min="1" max="50" value="{{amount}}">
+        </div>
+
+      </div>
+
+      <div class="setting">
+  
+        <div class="label">
+          <h3 class="{{getTheme()}}">Category:</h3>
         </div>
   
         <div class="option">
@@ -60,6 +54,14 @@
             <option value=32>Cartoons</option>
           </select>
         </div>
+
+      </div>
+
+      <div class="setting">
+  
+        <div class="label">
+          <h3 class="{{getTheme()}}">Difficulty:</h3>
+        </div>
   
         <div class="option">
           <select class="{{getTheme()}}" (change)="setDifficulty($any($event.target).value)" id="difficulty" value="{{difficulty}}">
@@ -69,6 +71,15 @@
             <option value="hard"    >Hard</option>
           </select>
         </div>
+
+      </div>
+  
+      <div class="setting">
+
+        <div class="label">
+          <h3 class="{{getTheme()}}">Type:</h3>
+        </div>
+  
   
         <div class="option">
           <select class="{{getTheme()}}" (change)="setType($any($event.target).value)" id="type" value="{{type}}">
@@ -77,7 +88,9 @@
             <option value="boolean"   >True/False</option>
           </select>
         </div>
+
       </div>
+      
     </div>
   
     <div class="lower {{getTheme()}}">
