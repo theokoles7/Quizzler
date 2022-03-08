@@ -1,6 +1,7 @@
 ![image](https://user-images.githubusercontent.com/61356329/150190244-cf72f538-0589-4177-b66c-d3087051c447.png)
 
 Quizzler is an online quiz game to test your knowledge on a wide range of topics!
+https://theokoles7.github.io/Quizzler/
 
 ![image](https://user-images.githubusercontent.com/61356329/150190132-b2e55640-0402-438e-9ad5-9216f72412ae.png)
 
