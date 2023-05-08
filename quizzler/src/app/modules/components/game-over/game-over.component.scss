@@ -52,6 +52,7 @@ div.modal-backdrop{
       width: 100%;
       height: 20%;
       position: relative;
+      border-radius: 0.5em 0.5em 0 0;
 
       @media only screen and (max-width: 768px){
         height: 20%;
@@ -60,7 +61,6 @@ div.modal-backdrop{
       &.light, &.none{
         background-color: $blue;
         border-bottom: solid $black .5em;
-        border-radius: 0.5em 0.5em 0 0;
 
         @media only screen and (max-width: 768px){
           border-bottom-width: .2em;
@@ -177,6 +177,14 @@ div.modal-backdrop{
         font-size: 1.5em;
         border: none;
 
+        &#review{
+          border-radius: 0 0 0 0.3em;
+        }
+
+        &#new{
+          border-radius: 0 0 0.3em 0;
+        }
+
         @media only screen and (max-width: 768px){
           padding-top: .5em;
           padding-bottom: .5em;
@@ -194,12 +202,10 @@ div.modal-backdrop{
 
           &#review{
             background-color: $red;
-            border-radius: 0 0 0 0.3em;
           }
-
+  
           &#new{
             background-color: $green;
-            border-radius: 0 0 0.3em 0;
           }
         }
       
