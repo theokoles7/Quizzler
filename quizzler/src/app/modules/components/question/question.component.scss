@@ -172,11 +172,23 @@ div.outer{
         &:disabled{
   
           &.correct{
+            animation: fade-in-lite-green .5s linear 0s 1 normal none;
             background-color: $green;
+          }
+
+          @keyframes fade-in-lite-green{
+            0%{background-color: $white;}
+            100%{background-color: $green;}
           }
   
           &.incorrect{
+            animation: fade-in-lite-red .5s linear 0s 1 normal none;
             background-color: $red;
+          }
+
+          @keyframes fade-in-lite-red{
+            0%{background-color: $white;}
+            100%{background-color: $red;}
           }
   
           &:hover{
@@ -199,11 +211,23 @@ div.outer{
         &:disabled{
   
           &.correct{
+            animation: fade-in-green .5s linear 0s 1 normal none;
             outline-color: $green;
+          }
+
+          @keyframes fade-in-green{
+            0%{outline-color: $shale;}
+            100%{outline-color: $green;}
           }
   
           &.incorrect{
+            animation: fade-in-red .5s linear 0s 1 normal none;
             outline-color: $red;
+          }
+
+          @keyframes fade-in-red{
+            0%{outline-color: $shale;}
+            100%{outline-color: $red;}
           }
   
           &:hover{
