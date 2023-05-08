@@ -139,6 +139,18 @@ div.wrapper{
           @media only screen and (max-width: 768px){
             -webkit-text-stroke-width: .5px;
           }
+
+          &.correct{
+            &#correct{
+              animation: flash-lite-green ease-in-out 1s;
+            }
+          } 
+  
+          &.incorrect{
+            &#incorrect{
+              animation: flash-lite-red ease-in-out 1s;
+            }
+          } 
         }
 
         &.dark{
@@ -148,8 +160,108 @@ div.wrapper{
           @media only screen and (max-width: 768px){
             -webkit-text-stroke-width: .5px;
           }
+
+          &.correct{
+            &#correct{
+              animation: flash-dark-green ease-in-out 1s;
+            }
+          } 
+  
+          &.incorrect{
+            &#incorrect{
+              animation: flash-dark-red ease-in-out 1s;
+            }
+          } 
         }
       }
+    }
+  }
+
+  @keyframes flash-lite-green{
+    0%{
+      color: $black;
+      -webkit-text-stroke: $black 1px;
+    }
+    25%{
+      color: $green;
+      -webkit-text-stroke: $green 1px;
+      text-shadow: 0 0 2em $green;
+    }
+    50%{
+      color: $green;
+      -webkit-text-stroke: $green 1px;
+      text-shadow: 0 0 2em $green;
+    }
+    75%{
+      color: $green;
+      -webkit-text-stroke: $green 1px;
+      text-shadow: 0 0 2em $green;
+    }
+    100%{
+      color: $black;
+      -webkit-text-stroke: $black 1px;
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes flash-lite-red{
+    0%{
+      color: $black;
+      -webkit-text-stroke: $black 1px;
+    }
+    25%{
+      color: $red;
+      -webkit-text-stroke: $red 1px;
+      text-shadow: 0 0 2em $red;
+    }
+    50%{
+      color: $red;
+      -webkit-text-stroke: $red 1px;
+      text-shadow: 0 0 2em $red;
+    }
+    75%{
+      color: $red;
+      -webkit-text-stroke: $red 1px;
+      text-shadow: 0 0 2em $red;
+    }
+    100%{
+      color: $black;
+      -webkit-text-stroke: $black 1px;
+      text-shadow: none;
+    }
+  }
+
+  @keyframes flash-dark-green{
+    0%{
+      color: $silver;
+      -webkit-text-stroke: $silver 1px;
+    }
+    50%{
+      color: $green;
+      -webkit-text-stroke: $green 1px;
+      text-shadow: 0 0 2em $green;
+    }
+    100%{
+      color: $silver;
+      -webkit-text-stroke: $silver 1px;
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes flash-dark-red{
+    0%{
+      color: $silver;
+      -webkit-text-stroke: $silver 1px;
+    }
+    50%{
+      color: $red;
+      -webkit-text-stroke: $red 1px;
+      text-shadow: 0 0 2em $red;
+    }
+    100%{
+      color: $silver;
+      -webkit-text-stroke: $silver 1px;
+      text-shadow: none;
     }
   }
 }

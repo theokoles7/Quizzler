@@ -21,6 +21,8 @@ export class GameComponent implements OnInit {
   incorrect: number = 0;
   score: number = 0;
 
+  last_result!: String;
+
   @ViewChild(GameOverComponent) gameOverDialog!: GameOverComponent;
 
   constructor(
@@ -54,14 +56,20 @@ export class GameComponent implements OnInit {
   })
   }
 
-  answerCorrect(): void{
+  async answerCorrect(){
     this.correct = ++this.gameService.correct;
     this.updateScore();
+    this.last_result = "correct";
+    await this.delay(2000);
+    this.last_result = "none";
   }
 
-  answerIncorrect(): void{
+  async answerIncorrect(){
     this.incorrect = ++this.gameService.incorrect;
     this.updateScore();
+    this.last_result = "incorrect";
+    await this.delay(2000);
+    this.last_result = "none";
   }
 
   updateScore(): void{
@@ -69,5 +77,9 @@ export class GameComponent implements OnInit {
     if(this.correct + this.incorrect === this.questions.length){
       this.gameOverDialog.show();
     }
+  }
+
+  delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
